@@ -1,0 +1,90 @@
+.gallery-slider
+  margin 30px 0
+  clearfix()
+  &__view
+    position relative
+    margin 0 -15px
+  &__view-item
+    position relative
+    padding-top percentage(211/338)
+  &__view-img
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+  &__thumb
+    position relative
+    margin 7px 0
+  &__thumb-inner
+    position static
+    overflow hidden
+    width 200px
+    margin 0 auto
+    .slick-list
+      margin 0 -5px
+    .slick-slide
+      margin 0 5px
+      position relative
+      cursor pointer
+      transition 0.15s
+      &:before
+        content ''
+        position absolute
+        top 0
+        left 0
+        width 100%
+        height 100%
+        border 3px solid transparent
+        pointer-events none
+        z-index 2
+        transition inherit
+      &.slick-current
+        &:before
+          border-color $blue-1
+    .slick-arrow
+      position absolute
+      top 0
+      height 100%
+      color #9fb3c8
+      font-size 17px
+      display flex
+      justify-content center
+      align-items center
+      transition 0.15s
+      &:hover, &:focus
+        color #295786
+    .slick-prev
+      left 0
+      transform rotate(180deg)
+    .slick-next
+      right 0
+  &__thumb-item
+    position relative
+    padding-top 100%
+    &.loading
+      &:before
+        width 20px
+        height 20px
+        border-width 2px
+  &__thumb-img
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+
+  @media (min-width $screen-sm-min)
+    &__view-item
+      padding-top percentage(349/785)
+    &__thumb-inner
+      .slick-prev
+        left 50%
+        margin-left -145px
+      .slick-next
+        right 50%
+        margin-right -145px
+
+  @media (min-width $screen-md-min)
+    &__view
+      margin 0 -40px

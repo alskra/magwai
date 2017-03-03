@@ -1,0 +1,55 @@
+{
+  "modernizr": {
+    "js": "./app_components/modernizr/modernizr-custom.js"
+  },
+  "jquery": {
+    "js": "./bower_components/jquery/dist/jquery.min.js"
+  },
+  "img-object-fit": {
+    "css": "./app_components/img-object-fit/img-object-fit.styl",
+    "js": "./app_components/img-object-fit/img-object-fit.js"
+  },
+  "slideout": {
+    "css": "./bower_components/slideout.js/index.css",
+    "js": "./bower_components/slideout.js/dist/slideout.min.js"
+  },
+  "jquery.dotdotdot": {
+    "js": "./app_components/jquery.dotdotdot/jquery.dotdotdot.min.js"
+  },
+  "slick-carousel": {
+    "css": "./bower_components/slick-carousel/slick/slick.css",
+    "js": "./bower_components/slick-carousel/slick/slick.min.js"
+  },
+  "perfect-scrollbar": {
+    "css": "./bower_components/perfect-scrollbar/css/perfect-scrollbar.css",
+    "js": "./bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"
+  },
+  "glyphicons": {
+    "css": "./src/fonts/glyphicons/glyphicons.css"
+  },
+  "font-awesome": {
+    "css": "./src/fonts/font-awesome/font-awesome.css"
+  },
+  "fonts": {
+    "css": ["./src/fonts/zero-width/zero-width.css", "./src/fonts/MuseoSansCyrl/MuseoSansCyrl.css"]
+  },
+  "goodshare": {
+    "js": "./app_components/goodshare/goodshare.min.js"
+  },
+  "jquery.arcticmodal": {
+    "css": "./app_components/jquery.arcticmodal/jquery.arcticmodal-0.3.styl",
+    "js": "./app_components/jquery.arcticmodal/jquery.arcticmodal-0.3.min.js"
+  },
+  "ikSelect": {
+    "js": "./app_components/jquery.ikSelect/jquery.ikSelect.min.js"
+  },
+  "bootstrap": {
+    "css": "./app_components/bootstrap/css/index.styl",
+    "js": ["./app_components/bootstrap/js/transition.js", "./app_components/bootstrap/js/dropdown.js", "./app_components/bootstrap/js/tooltip.js"]
+  },
+
+  "css": ["fonts", "font-awesome", "glyphicons", "img-object-fit", "slideout", "slick-carousel", "perfect-scrollbar", "bootstrap", "jquery.arcticmodal"],
+  "js": ["modernizr", "jquery", "img-object-fit", "slideout", "jquery.dotdotdot", "slick-carousel", "perfect-scrollbar", "goodshare", "bootstrap", "jquery.arcticmodal", "ikSelect"],
+
+  "levels": ["./src/_common.blocks"]
+}

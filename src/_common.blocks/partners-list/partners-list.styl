@@ -1,0 +1,67 @@
+.partners-list
+  position relative
+  margin-bottom 48px
+  .slick-slider
+    position static
+    margin 0 30px
+    overflow hidden
+  .slick-list
+    margin 0 -10px
+  .slick-slide
+    margin 0 10px
+  .slick-arrow
+    position absolute
+    top 0
+    height 100%
+    color #9fb3c8
+    font-size 15px
+    display flex
+    justify-content center
+    align-items center
+    transition 0.15s
+    &:hover, &:focus
+      color #295786
+  .slick-prev
+    left 0
+    transform rotate(180deg)
+  .slick-next
+    right 0
+  .slick-dots
+    position absolute
+    left 0
+    right 0
+    bottom -48px
+  &__item
+    display block
+    height 40px
+    position relative
+    background-position 50%
+    background-repeat no-repeat
+    background-size contain
+    mask-position 50%
+    mask-repeat no-repeat
+    mask-size contain
+    opacity 0.7
+    transition 0.15s
+    filter contrast(0)
+    &:hover
+      opacity 1
+      filter contrast(1)
+    &_mask-image
+      filter contrast(1)
+      &:before
+        content ''
+        position absolute
+        top 0
+        left 0
+        width 100%
+        height 100%
+        background #7693b1
+        transition inherit
+      &:hover
+        &:before
+          background transparent
+
+
+  @media (min-width: $screen-sm-min)
+    margin-bottom 0

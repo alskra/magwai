@@ -1,0 +1,14 @@
+mixin breadcrumbs(data)
+  nav.-breadcrumbs&attributes(attributes)
+    .container-fluid
+      .-breadcrumbs.__inner
+        each item, index in data
+          .__item
+            if index !== data.length - 1
+              +a(item.url).__link= item.title
+            else
+              span.__link= item.title
+            span.__icon.icon.icon-arr-right
+
+
+

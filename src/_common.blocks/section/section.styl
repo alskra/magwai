@@ -1,0 +1,92 @@
+.section
+  padding 30px 0
+  &__header
+    margin-top -30px
+  &__footer
+    margin-bottom -30px
+  &__title
+    text-align center
+    font-size 20px
+    margin-top 0
+    margin-bottom 30px
+  &__info
+    display flex
+    justify-content center
+    align-items flex-start
+    font-size 11px
+    text-transform uppercase
+    line-height 1.25em
+    margin-bottom 16px
+  &__comments
+    margin-left 25px
+  &__tags
+    &.tags
+      justify-content center
+      margin-bottom 20px
+  &_about
+    background-color #f1f5f8
+  &_top-rate
+    background url("section-bg-1.jpg") no-repeat 50% 0/cover
+    background-attachment fixed
+    text-align center
+    font-size 16px
+    color white
+    font-weight 500
+    .top-rate
+      margin 25px 0
+  &_bg
+    &_braun
+      background-color #3b2416
+      color #c2bdbc
+      font-size 13px
+      line-height (24/13)
+      text-transform uppercase
+      text-align center
+      font-weight 500
+      p
+        margin-left auto
+        margin-right auto
+        &:last-child
+          margin-bottom 0
+  &_write-view
+    & {$p}__title
+      margin-bottom 15px
+  &_comments
+    padding-top 0
+    .header-section
+      &__title
+        font-size 16px
+  &_error
+    color white
+    text-align center
+    & {$p}__title
+        color inherit
+    .btn
+      &_type_1
+        color white
+        border-color white
+        &:hover,
+        &:focus,
+        &.focus
+          border-color $blue-2
+
+  @media (min-width $screen-sm-min)
+    &__tags
+      &.tags
+        justify-content flex-start
+        margin-bottom -10px
+    &_type
+      &_1
+        padding 50px 0
+
+  @media (min-width $screen-md-min)
+    &__title
+      text-align left
+      font-size 28px
+    &__info
+      justify-content flex-start
+    &_type
+      &_2
+        padding 0
+        & {$p}__header, & {$p}__footer
+          margin 0

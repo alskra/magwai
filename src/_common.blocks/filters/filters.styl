@@ -1,0 +1,55 @@
+.filters
+  text-align center
+  margin 0 0 25px
+  .ps-scrollbar-x-rail, .ps-scrollbar-y-rail
+    display none !important
+  &__inner
+    background white
+    padding 10px 0
+  &__inner-2
+    position relative
+    &:before
+      content ''
+      display block
+      position absolute
+      top 0
+      left 0
+      right 0
+      bottom 0
+      z-index 2
+      pointer-events none
+      box-shadow inset 15px 0 15px -15px white, inset -15px 0 15px -15px white
+  &__scroll
+    display inline-flex
+    vertical-align top
+    align-items flex-start
+    max-width 100%
+  &__item
+    font-weight 500
+    white-space nowrap
+    &+&
+      margin-left 18px
+  &__link
+    display block
+    color #95acbc
+    border 2px solid #cfd9e0
+    font-size 11px
+    text-transform uppercase
+    line-height 1em
+    padding 11px 10px 9px
+    text-decoration none
+    &:hover, &:focus
+      color $blue-1
+      text-decoration none
+      border-color $blue-1
+    &_current
+      color white
+      border-color $blue-1
+      background $blue-1
+      &:hover, &:focus
+        color white
+  &_fixed
+    & {$p}__inner
+      position fixed
+      top $header-height
+      z-index 100

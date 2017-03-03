@@ -1,0 +1,37 @@
+include helpers/variables
+include helpers/mixins
+include components/doctype
+include components/header
+include components/content
+include components/footer
+include components/menu
+
+include components/breadcrumbs
+
++doctype(pages.error404.title)._error
+  +menu(menuList, [pages.error404.url])
+  .-wrapper
+    +header
+    +content
+      .__columns
+        +__column_left
+          header.-header-section._main._error.visible-md.visible-lg
+            .container-fluid
+              .row
+                .col-sm-10.col-sm-offset-1.col-md-12.col-md-offset-0
+                  .h1.-header-section.__title #[.__icon 404] Страница не найдена
+                  .-header-section.__description
+                    p Проверьте, правильно ли указан адрес страницы или воспользуйтесь поиском
+
+        main.__column._center
+          section.-section._error.hidden-md.hidden-lg
+            header.-header-section._error.section__header
+              .container-fluid
+                .row
+                  .col-sm-10.col-sm-offset-1.col-md-12.col-md-offset-0
+                    h1.-header-section.__title #[.__icon 404] Страница не найдена
+                    .-header-section.__description
+                      p Проверьте, правильно ли указан адрес страницы или воспользуйтесь поиском
+            .container-fluid.text-center
+              +a(pages.index.url).-btn._type_1 #[span.__label На главную]
+    +footer

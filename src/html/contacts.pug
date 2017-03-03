@@ -1,0 +1,67 @@
+include helpers/variables
+include helpers/mixins
+include components/doctype
+include components/header
+include components/content
+include components/footer
+include components/menu
+
+include components/breadcrumbs
+
++doctype(pages.contacts.title)._contacts
+  +menu(menuList, [pages.contacts.url])
+  .-wrapper
+    +header
+    +content
+      .__columns
+        +__column_left
+          +breadcrumbs([pages.index, pages.contacts])
+          header.-header-section._main.visible-md.visible-lg
+            .container-fluid
+              .row
+                .col-sm-10.col-sm-offset-1.col-md-12.col-md-offset-0
+                  .h1.-header-section.__title Контакты
+                  .-header-section.__description
+                    p Веб-студия «Магвай» помогает заказчикам выстраивать взаимоотношения с целевой аудиторией в Интернете.
+                    p Мы разрабатываем веб-проекты и помогаем бизнесу привлекать клиентов с 2009 года.
+
+        main.__column._center
+          section.-section._type_2
+            .container-fluid
+              h1.-section.__title.hidden-md.hidden-lg Контакты
+            .-contacts-map
+            script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDzOTEh0q0r-2BuVxeLGaNTXJDl-pgA_-4')
+            script.
+                function initialize(mapId, coords) {
+                    var mapOptions = {
+                        center: new google.maps.LatLng(coords[0], coords[1]),
+                        zoom: 15,
+                        zoomControl: true,
+                        scrollwheel: false,
+                        streetViewControl: false,
+                        overviewMapControl: false,
+                        panControl: false,
+                        mapTypeControl: false,
+                        draggable: true,
+                        styles: []
+                    };
+                    var map = new google.maps.Map(document.querySelector(mapId), mapOptions);
+                    var image = new google.maps.MarkerImage('img/marker.png',
+                        null,
+                        new google.maps.Point(0, 0),
+                        new google.maps.Point(20, 56)
+                    );
+                    var marker = new google.maps.Marker({
+                        map: map,
+                        position: new google.maps.LatLng(coords[0], coords[1]),
+                        title: 'Magwai'//,
+                        //icon: image
+                    });
+                }
+
+                $(function () {
+                    if ($('.contacts-map').length) {
+                        initialize('.contacts-map', [48.718858, 44.513593])
+                    }
+                });
+    +footer

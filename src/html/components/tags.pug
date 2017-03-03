@@ -1,0 +1,7 @@
+mixin tags(data, link)
+  .-tags&attributes(attributes)
+    each item, index in data
+      if link
+        +a.__item= item
+      else
+        span.__item= item

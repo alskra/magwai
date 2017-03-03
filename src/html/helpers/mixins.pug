@@ -1,0 +1,20 @@
+mixin resetCase(str)
+  = str[0].toUpperCase() + str.slice(1)
+
+- function resetCase(str) {return str[0].toUpperCase() + str.slice(1)}
+
+mixin a(href)
+  a(href= href || voidHref)&attributes(attributes)
+    block
+
+mixin aMail(mail)
+  a(href='mailto:' + mail)&attributes(attributes)= mail
+    block
+
+mixin img(src, title, fit, size)
+  img(src= src title= title || '' alt= title || ''
+    class={'img-object-fit': fit === 'fit'}
+    class={'contain': size === 'contain'}
+    class={'scale-down': size === 'scale-down'}
+    onload=fit === 'fit' ? 'objectFit(this)' : null
+  )&attributes(attributes)

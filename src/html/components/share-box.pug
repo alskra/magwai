@@ -1,0 +1,23 @@
+mixin share-box()
+  .-share-box
+    .__item
+      span.__btn.icon.icon-fb.goodshare(data-type='fb' title='Facebook')
+        span.__counter(data-counter='fb')
+
+    .__item
+      span.__btn.icon.icon-twitter.goodshare(data-type='tw' title='Twitter')
+        span.__counter(data-counter='tw')
+
+    .__item
+      span.__btn.icon.icon-vk.goodshare(data-type='vk' title='VK')
+        span.__counter(data-counter='vk')
+
+    .__item._share.dropup Поделиться
+      span.__btn.icon.icon-share.dropdown-toggle(data-toggle='dropdown')
+      .__share-list.dropdown-menu.dropdown-menu-right
+        .__item
+          span.__btn.fa.fa-google-plus.goodshare(data-type='gp' title='Google Plus')
+            span.__counter(data-counter='gp')
+        .__item
+          span.__btn.fa.fa-whatsapp.goodshare(data-type='wa' title='WhatsApp')
+            span.__counter(data-counter='wa')

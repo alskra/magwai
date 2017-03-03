@@ -1,0 +1,49 @@
+.radio
+  display inline-flex
+  vertical-align top
+  position relative
+  align-items flex-start
+  padding-left 30px
+  line-height ($line-height-base)em
+  color $text-color
+  &__ctrl
+    clip rect(0, 0, 0, 0)
+    position absolute
+    width 0
+    height 0
+    &:focus
+      &+{$p}__fake
+        border-color $blue-1
+    &:checked
+      &+{$p}__fake
+        &:before
+          opacity 1
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] &
+      &~{$p}__fake, &~{$p}__label
+        cursor $cursor-disabled
+        opacity 0.5
+        box-shadow none
+        pointer-events none
+  &__fake
+    position absolute
+    top ($line-height-base/2)em
+    left 0
+    display flex
+    justify-content center
+    align-items center
+    width 20px
+    height 20px
+    margin -10px 0
+    border 2px solid #cfd9e0
+    cursor pointer
+    border-radius 50%
+    transition 0.15s
+    &:before
+      opacity 0
+      font-size 8px
+      line-height 1
+      transition inherit
+  &__label
+    overflow hidden

@@ -1,0 +1,70 @@
+.write-item-2
+  padding 30px 0
+  border-top 1px solid #e8edf1
+  page-break-inside avoid
+  transition 0.15s
+  p
+    margin 0
+    display inline
+  &__inner
+    display block
+    color $text-color !important
+    text-decoration none !important
+    transition inherit
+    &:hover
+      & {$p}__title-link, & {$p}__icon-read
+        color $blue-1
+        &:hover, &:focus
+          color darken($blue-1, 15)
+  &__title
+    font-size 20px
+    line-height 1.25em
+    letter-spacing 0.025em
+    margin 0 0 12px
+    transition inherit
+  &__title-link
+    display block
+    color inherit
+    text-decoration none !important
+    transition inherit
+  &__info
+    display flex
+    justify-content space-between
+    align-items flex-start
+    font-size 11px
+    text-transform uppercase
+    line-height 1.25em
+    margin-bottom 16px
+  &__comments
+    margin 0 0 0 25px
+  &__share
+    flex-grow 1
+    margin 0 0 0 25px
+    &.share-box
+      justify-content flex-end
+    .share-box__item
+      margin 0
+  &__img-wrap
+    display block
+    position relative
+    padding-top percentage(211/374)
+    margin-bottom 20px
+    overflow hidden
+    isolation isolate
+    transition inherit
+  &__img
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+  &__text
+    margin-bottom 20px
+    line-height (20/14)em
+    transition inherit
+  &__icon-read
+    color inherit
+    text-decoration none !important
+    font-size 9px
+    margin-left 10px
+    transition inherit

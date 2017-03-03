@@ -1,0 +1,35 @@
+.form-search
+  display flex
+  height 54px
+  background-color #e8edf1
+  margin -1px 0 0
+  &__field
+    flex 1 1 100%
+    padding 0 58px 0 15px
+    background-color transparent
+    font-size 14px
+    text-transform uppercase
+    color #395b77
+    border 0
+    transition 0.15s
+    &:focus
+      outline 0
+      box-shadow inset 0 1px 3px rgba(#295786, 0.4), inset 0 -1px 3px rgba(#295786, 0.4)
+    &::placeholder
+      color #395b77
+      opacity 0.7
+  &__btn
+    flex 0 0 58px
+    margin-left -58px
+    border 0
+    background none
+    padding 0
+    display flex
+    justify-content center
+    align-items center
+    font-size 19px
+    color $blue-3
+    &:focus
+      outline 0
+
+

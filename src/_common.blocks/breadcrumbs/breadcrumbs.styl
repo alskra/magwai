@@ -1,0 +1,26 @@
+.breadcrumbs
+  font-size 11px
+  line-height 2em
+  text-transform uppercase
+  font-weight 500
+  cursor default
+  &__inner
+    padding 17px 0 15px
+    border-bottom 1px solid #e8edf1
+  &__item
+    display inline
+    &:last-child
+      & {$p}__link
+        &:hover, &:focus
+          color inherit
+      & {$p}__icon
+        display none
+  &__link
+    color inherit
+    text-decoration none !important
+    &:hover, &:focus
+      color $blue-1
+  &__icon
+    font-size 9px
+    color #cfd9e0
+    margin 0 6px 0 10px

@@ -1,0 +1,39 @@
+-
+  var menuList = [
+    {title: 'Студия', url: pages.about.url, submenu: [
+        {title: 'Кто мы', url: pages.about.url},
+        {title: 'Что делаем', url: pages.services.url},
+        {title: 'Рейтинги', url: pages.rates.url},
+        {title: 'Вакансии', url: pages.vacancies.url},
+        {title: 'Отзывы', url: pages.reviews.url}
+      ]
+    },
+    {title: 'Кейсы', url: pages.cases.url},
+    {title: 'Услуги', url: pages.services.url, submenu: [
+        {title: 'Разработка сайтов', url: pages.serviceView.url},
+        {title: 'Интернет реклама', url: voidHref},
+        {title: 'Брендирование', url: voidHref},
+        {title: 'Веб-сервис', url: voidHref}
+      ]
+    },
+    {title: 'Процесс', url: pages.process.url},
+    {title: 'Клиенты', url: pages.clients.url},
+    {title: 'Блог',url: pages.blog.url},
+    {title: 'Контакты',url: pages.contacts.url}
+  ];
+
+mixin menu(menuList, url)
+  nav.-menu&attributes(attributes)
+    each item in menuList
+      .__item._lvl_1(class={_submenu: item.submenu} class={_current: item.url === url[0]})
+        a.__btn._lvl_1(href= item.url)
+          span.__label._lvl_1= item.title
+          span.__icon._lvl_1
+        if item.submenu
+          .__submenu._lvl_1
+            .container-fluid
+              each itemInner in item.submenu
+                .-menu.__item._lvl_2(class={_submenu: itemInner.submenu} class={_current: itemInner.url === url[1]})
+                  a.__btn._lvl_2(href= itemInner.url)
+                    span.__label._lvl_2= itemInner.title
+                    span.__icon._lvl_2

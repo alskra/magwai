@@ -1,0 +1,156 @@
+include helpers/variables
+include helpers/mixins
+include components/doctype
+include components/header
+include components/content
+include components/footer
+include components/menu
+
+include components/filters
+include components/cases-list
+
++doctype(pages.index.title)
+  +menu(menuList, pages.index.url)
+  .-wrapper
+    +header
+    +content
+      .__columns
+        +__column_left
+          header.-header-section._main._about
+            .container-fluid
+              .row
+                .col-sm-10.col-sm-offset-1.col-md-12.col-md-offset-0
+                  h1.-header-section.__title #[.__icon.icon.icon-logo] Студия интернет решений
+                  .-header-section.__description
+                    p Веб-студия «Магвай» помогает заказчикам выстраивать взаимоотношения с целевой аудиторией в Интернете.
+                    p Мы разрабатываем веб-проекты и помогаем бизнесу привлекать клиентов с 2009 года.
+        main.__column._center
+          // Cases Section
+          section.-section._type_1._cases#section_cases
+            header.-header-section.section__header
+              .container-fluid
+                .row
+                  .col-sm-10.col-sm-offset-1
+                    h2.-header-section.__title Портфолио
+                    .-header-section.__subtitle
+                      p Для вас мы разложили работы по полочкам
+            +filters(filters, true)(data-section='section_cases')
+            +cases-list(casesList.slice(0, 6))
+            footer.-footer-section.section__footer
+              .container-fluid
+                +a(pages.cases.url).-btn._type_1 #[span.__label Больше проектов]
+          // /Cases Section
+
+          // About Section
+          section.-section._type_1._about#section_about
+            header.-header-section.section__header
+              .container-fluid
+                .row
+                  .col-sm-10.col-sm-offset-1
+                    h2.-header-section.__title Наша студия
+                    .-header-section.__subtitle
+                      p несколько фактоВ О НАШЕЙ КОМПАНИИ
+                    .-header-section.__description
+                      p Веб-студия Магвай - команда специалистов из Волгограда, обладающая опытом и знаниями в области интернет-технологий. Мы предлагаем  комплекс услуг по разработке сайтов и их рекламе в Интернете.
+            footer.-footer-section.section__footer
+              .container-fluid
+                +a(pages.about.url).-btn._type_1 #[span.__label Узнать больше]
+          // /About Section
+
+          // Services Section
+          #section_services
+            .-sliding-box
+              .__header
+                .__header-inner.container-fluid.container-fluid_none-padding
+                  .__ctrl-line
+                  .__ctrl
+                    .__ctrl-icon.icon.icon-devices
+                    .__ctrl-label.hidden-xs Разработка сайтов
+                  .__ctrl
+                    .__ctrl-icon.icon.icon-ad
+                    .__ctrl-label.hidden-xs Интернет реклама
+                  .__ctrl
+                    .__ctrl-icon.icon.icon-idea
+                    .__ctrl-label.hidden-xs Брендирование
+                  .__ctrl
+                    .__ctrl-icon.icon.icon-settings
+                    .__ctrl-label.hidden-xs Веб-сервис
+              .__slider.slick-slider(data-slick={"autoplay": true, "autoplaySpeed": 5000})
+                .slick-slide
+                  section.-section._type_1
+                    header.-header-section.section__header
+                      .container-fluid
+                        .row
+                          .col-sm-10.col-sm-offset-1
+                            h2.-header-section.__title Разработка сайтов
+                            .-header-section.__description
+                              p Вы хотите эксклюзивный современный дизайн сайта и профессиональную техническую разработку и изготовление? Вы обратились по адресу! Техническое изготовление, разработка дизайна корпоративного сайта и его поддержка — это то, что мы умеем делать лучше всего.
+                    footer.-footer-section.section__footer
+                      .container-fluid
+                        +a(pages.serviceView.url).-btn._type_1 #[span.__label Узнать больше]
+                .slick-slide
+                  section.-section._type_1
+                    header.-header-section.section__header
+                      .container-fluid
+                        .row
+                          .col-sm-10.col-sm-offset-1
+                            h2.-header-section.__title Интернет реклама
+                            .-header-section.__description
+                              p Elevatuss peregrinatione, tanquam teres lacta. Sunt indictioes aperto primus, superbus caculaes. Buxums ortum! Clemens, bi-color absolutios semper manifestum de brevis, emeritis canis.
+                    footer.-footer-section.section__footer
+                      .container-fluid
+                        +a(pages.serviceView.url).-btn._type_1 #[span.__label Узнать больше]
+                .slick-slide
+                  section.-section._type_1
+                    header.-header-section.section__header
+                      .container-fluid
+                        .row
+                          .col-sm-10.col-sm-offset-1
+                            h2.-header-section.__title Брендирование
+                            .-header-section.__description
+                              p Est superbus species, cesaris. Fortis, dexter omnias callide reperire de primus, secundus torquis. Heuretes trabems, tanquam salvus devirginato. A falsis, rumor fatalis frondator. Cum vigil unda, omnes hibridaes talem bi-color, camerarius pulchritudinees.
+                    footer.-footer-section.section__footer
+                      .container-fluid
+                        +a(pages.serviceView.url).-btn._type_1 #[span.__label Узнать больше]
+                .slick-slide
+                  section.-section._type_1
+                    header.-header-section.section__header
+                      .container-fluid
+                        .row
+                          .col-sm-10.col-sm-offset-1
+                            h2.-header-section.__title Веб-сервис
+                            .-header-section.__description
+                              p Hippotoxotas persuadere in bi-color vierium! Vae, ferox advena! A falsis, lanista placidus classis. Nunquam experientia diatria. Fidelis messor superbe contactuss orgia est. Ubi est audax uria? Cum calceus manducare, omnes abactores gratia primus, varius galluses.
+                    footer.-footer-section.section__footer
+                      .container-fluid
+                        +a(pages.serviceView.url).-btn._type_1 #[span.__label Узнать больше]
+          // /Services Section
+
+          // Top Section
+          section.-section._type_1._top-rate#section_top-rate
+            .container-fluid
+              .row
+                .col-sm-8.col-sm-offset-2
+                  .-top-rate 52
+                  p В рейтинге Топ-200 ведущих веб-студий Рунета по ЮФО у нас #[span.blue-2 3&nbsp;место]
+          // /Top Section
+
+          // Partners Section
+          section.-section._type_1._partners#section_partners
+            .container-fluid
+              .-partners-list
+                .__slider.slick-slider(data-slick={"autoplay": true, "autoplaySpeed": 7000})
+                  .slick-slide
+                    +a().-partners-list.__item(target='_blank' title='Tagline' style={'background-image': 'url(files/pics/partners/tagline-logo.png)'})
+                  .slick-slide
+                    +a().-partners-list.__item(target='_blank' title='CMS Magazine' style={'background-image': 'url(files/pics/partners/CMS_Magazine.png)'})
+                  .slick-slide
+                    +a().-partners-list.__item(target='_blank' title='1C-Bitrix' style={'background-image': 'url(files/pics/partners/logo_bitrix.png)'})
+                  .slick-slide
+                    +a().-partners-list.__item(target='_blank' title='Tagline' style={'background-image': 'url(files/pics/partners/tagline-logo.png)'})
+                  .slick-slide
+                    +a().-partners-list.__item(target='_blank' title='CMS Magazine' style={'background-image': 'url(files/pics/partners/CMS_Magazine.png)'})
+                  .slick-slide
+                    +a().-partners-list.__item(target='_blank' title='1C-Bitrix' style={'background-image': 'url(files/pics/partners/logo_bitrix.png)'})
+          // /Partners Section
+    +footer

@@ -1,0 +1,205 @@
+include helpers/variables
+include helpers/mixins
+include components/doctype
+include components/header
+include components/content
+include components/footer
+include components/menu
+
+include components/breadcrumbs
+include components/filters
+include components/tags
+include components/share-box
+
++doctype(pages.blogView.title)
+  +menu(menuList, [pages.blog.url, pages.blogView.url])
+  .-wrapper
+    +header
+    +content
+      .__columns
+        +__column_left
+          +breadcrumbs([pages.index, pages.blog, {title: 'Mts на «Стачке-2016»: бьем рекорды, отмечаем день рождения', url: pages.blogView.url}])
+          form.-form-search(action='/')
+            input.__field(type='search' placeholder='Поиск записей')
+            button.__btn.icon.icon-search(type='submit')
+          +filters(['Интернет-магазин', 'landing page', 'seo', 'smm', 'digital компании']).visible-md.visible-lg
+
+        main.__column._center
+          article.-section._write-view
+            .container-fluid
+              h1.-section.__title Mts на «Стачке-2016»: бьем рекорды, отмечаем день рождения
+              .-section.__info
+                .-date.section__date
+                  span.__icon.icon.icon-calendar
+                  | 8 сентября 2016
+                .-comments.section__comments
+                  span.__icon.icon.icon-comment
+                  | 3
+
+              .-gallery-slider.margin-none-top
+                .__view.slick-slider
+                  .slick-slide
+                    .-gallery-slider.__view-item.loading.loading_before
+                      +img(null, null, 'fit')(data-lazy='files/pics/picjumbo.jpg').__view-img
+                  .slick-slide
+                    .-gallery-slider.__view-item.loading.loading_before
+                      +img(null, null, 'fit')(data-lazy='files/pics/picjumbo2.jpg').__view-img
+                  .slick-slide
+                    .-gallery-slider.__view-item.loading.loading_before
+                      +img(null, null, 'fit')(data-lazy='files/pics/picjumbo3.jpg').__view-img
+                  .slick-slide
+                    .-gallery-slider.__view-item.loading.loading_before
+                      +img(null, null, 'fit')(data-lazy='files/pics/unsplash_522af9ac823b4_1.jpg').__view-img
+
+                .__thumb
+                  .__thumb-inner.slick-slider
+                    .slick-slide
+                      .-gallery-slider.__thumb-item.loading.loading_before
+                        +img(null, null, 'fit')(data-lazy='files/pics/picjumbo.jpg').__thumb-img
+                    .slick-slide
+                      .-gallery-slider.__thumb-item.loading.loading_before
+                        +img(null, null, 'fit')(data-lazy='files/pics/picjumbo2.jpg').__thumb-img
+                    .slick-slide
+                      .-gallery-slider.__thumb-item.loading.loading_before
+                        +img(null, null, 'fit')(data-lazy='files/pics/picjumbo3.jpg').__thumb-img
+                    .slick-slide
+                      .-gallery-slider.__thumb-item.loading.loading_before
+                        +img(null, null, 'fit')(data-lazy='files/pics/unsplash_522af9ac823b4_1.jpg').__thumb-img
+
+              p Как и с ценой, кнопку покупки делаем бросающейся в глаза. В тексте используют варианты «в корзину», «добавить в корзину», «купить». Мне близок последний вариант, как однозначный и побуждающий к действию.
+              p Обратите внимание на ссылку «Купить в один клик». По ней открывается форма, где покупатель заполняет номер телефона и имя. Вариант для тех, кто не разбирается в интернете.
+              p Покупателю сразу показываем варианты доставки, стоимость и сроки. Типичный магазин использует 3 варианта доставки: курьерская, самовывоз из точки доставки, почтой РФ. Каждый вариант можно разделить еще на несколько, но основные эти. Пользователю стоит давать выбор, но не избыточный. Выбирать из 10 вариантов курьерской доставки с разным ценником трудно. Покупателю не интересно с кем из транспортных компаний у вас договор, его интересуют только сроки, цена и какой пункт выдачи ближе.
+              p Поэтому стоит как можно больше стандартизировать и свести варианты доставки к 2-4 понятным пунктам с одинаковым ценнником внутри одного типа доставки. Если интернет-магазин торгует в одном регионе, варианты доставки и стоимость указываем сразу. Не получается уместить (22 района города и везде разная стоимость доставки) – разворачиваем блок по клику При работе на много регионов, определяем город по ip и выводим данные о доставке для этого населенного пункта.
+
+            .-footer-section
+              .container-fluid
+                .row
+                  .col-sm-6
+                    +tags(['smm', 'digital компании', 'технологии'], true).section__tags
+                  .col-sm-6
+                    +share-box
+            .container-fluid
+              hr.-hr._none-margin_all
+            footer.-footer-section
+              .container-fluid
+                .row
+                  .col-xs-6.text-left
+                    +a.-link._type_prev #[span.__icon.icon.icon-arr-right-2]#[span.hidden-md.hidden-lg Назад]#[span.visible-md-inline.visible-lg-inline Предыдущая запись]
+                  .col-xs-6.text-right
+                    +a.-link._type_next #[span.hidden-md.hidden-lg Вперёд]#[span.visible-md-inline.visible-lg-inline Следующая запись]#[span.__icon.icon.icon-arr-right-2]
+            .container-fluid
+              hr.-hr._none-margin_all
+
+          section.-section._comments
+            form.-form-comment(action='/')
+              .__inner.container-fluid
+                .__col._left
+                  label.-upload-file
+                    input.__field(type='file' accept='image/jpeg,image/png,image/gif')
+                    .__btn._preview.btn.js-tooltip(data-placement='bottom' title='Добавить фото')
+                    .__src.hide
+                .__col._right
+                  .-row-form._has-icon.form-comment__row_1
+                    textarea.-field._area._collapsible(placeholder='Ваш комментарий')
+                    span.__icon.icon.icon-pen
+                  .-row-form.form-comment__row_2
+                    input.-field(type='text' placeholder='Ваше имя')
+                  .-row-form.form-comment__row_3
+                    input.-field(type='email' placeholder='Ваш e-mail')
+            header.-header-section
+              .container-fluid
+                h2.-header-section.__title._text_left Комментарии: #[span.blue-1 3]
+            .container-fluid
+              .-comments-list
+                article.-comment-item
+                  .__inner
+                    .__col_left
+                      .__user-avatar-wrap
+                    .__col_right
+                      header.__header
+                        h3.__user-name Василий Пупкин
+                        .__date 8 сентября 2016&nbsp;&nbsp;&nbsp;20:36
+                      .__content
+                        p Веб-студия «Магвай» помогает заказчикам выстраивать взаимоотношения с целевой аудиторией в Интернете. Мы разрабатываем веб-проекты и помогаем бизнесу привлекать клиентов с 2009 года.
+                      footer.__footer
+                        +a().__reply-btn Ответить#[span.__reply-icon.icon.icon-reply]
+                article.-comment-item
+                  .__inner
+                    .__col_left
+                      .__user-avatar-wrap
+                        +img('files/pics/1380545-medium1.jpg', 'Алина Виноградова', 'fit').__user-avatar
+                    .__col_right
+                      header.__header
+                        h3.__user-name Алина Виноградова
+                        .__date 8 сентября 2016&nbsp;&nbsp;&nbsp;20:36
+                      .__content
+                        p Описание и технические характеристики товаров одинаковые. Это нормально, поисковые системы понимают, что к каждому товару уникальное описание сделать невозможно. Но описание должно быть. Подробное, если получится. Идеально, если с видео, презентующим товар. Подходит для товаров, применение которых неочевидно.
+                      footer.__footer
+                        +a().__reply-btn Ответить#[span.__reply-icon.icon.icon-reply]
+                  article.-comment-item.comment-item__reply-item
+                    .__inner
+                      .__col_left
+                        .__user-avatar-wrap
+                      .__col_right
+                        header.__header
+                          h3.__user-name Василий Пупкин
+                          .__date 8 сентября 2016&nbsp;&nbsp;&nbsp;20:36
+                        .__content
+                          p Веб-студия «Магвай» помогает заказчикам выстраивать взаимоотношения с целевой аудиторией в Интернете. Мы разрабатываем веб-проекты и помогаем бизнесу привлекать клиентов с 2009 года.
+                        footer.__footer
+                          +a().__reply-btn Ответить#[span.__reply-icon.icon.icon-reply]
+                    article.-comment-item.comment-item__reply-item
+                      .__inner
+                        .__col_left
+                          .__user-avatar-wrap
+                        .__col_right
+                          header.__header
+                            h3.__user-name Имя Фамилия
+                            .__date 8 сентября 2016&nbsp;&nbsp;&nbsp;20:36
+                          .__content
+                            p Yahoo!!
+                          footer.__footer
+                            +a().__reply-btn Ответить#[span.__reply-icon.icon.icon-reply]
+                article.-comment-item
+                  .__inner
+                    .__col_left
+                      .__user-avatar-wrap
+                    .__col_right
+                      header.__header
+                        h3.__user-name Василий Пупкин
+                        .__date 8 сентября 2016&nbsp;&nbsp;&nbsp;20:36
+                      .__content
+                        p.
+                          Покупателю сразу показываем варианты доставки, стоимость и сроки.
+                          Типичный магазин использует 3 варианта доставки: курьерская, самовывоз из точки доставки, почтой РФ. Каждый вариант можно разделить еще на несколько, но основные эти.
+                          Пользователю стоит давать выбор, но не избыточный. Выбирать из 10 вариантов курьерской доставки с разным ценником трудно.
+                        p Покупателю не интересно с кем из транспортных компаний у вас договор, его интересуют только сроки, цена и какой пункт выдачи ближе.
+                      footer.__footer
+                        +a().__reply-btn Ответить#[span.__reply-icon.icon.icon-reply]
+              hr.-hr._none-margin_bottom
+            footer.-footer-section.section__footer
+              .container-fluid
+                +a().-btn._type_1 #[span.__label Ещё 5 комментариев]
+
+          section.-blog-best
+            .container-fluid.hidden-md.hidden-lg
+              hr.-hr._none-margin_all
+            header.-header-section.-blog-best__header
+              .container-fluid
+                h2.-header-section.__title._text_left Блог: Лучшее за неделю
+            .container-fluid
+              .-writes-list
+                article.-write-item
+                  +a(pages.blogView.url).__inner
+                    h3.__title Mts на «Стачке-2016»: бьем рекорды, отмечаем день рождения
+                    .__text
+                      p.
+                        Веб-студия «Магвай» помогает заказчикам выстраивать взаимоотношения с целевой аудиторией в Интернете. Мы разрабатываем веб-проекты и помогаем бизнесу привлекать клиентов с 2009 года...
+                      span.__icon-read.icon.icon-arr-right-2
+                article.-write-item
+                  +a(pages.blogView.url).__inner
+                    h3.__title Как увеличить продажи в кризис и при этом сэкономить средства?
+                    .__text
+                      p Salvus, castus compaters patienter demitto de talis, placidus itineris tramitem...
+                      span.__icon-read.icon.icon-arr-right-2
+    +footer

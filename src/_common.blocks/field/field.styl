@@ -1,0 +1,87 @@
+.field
+  border 2px solid #cfd9e0
+  padding 0 15px
+  display inline-flex
+  vertical-align top
+  align-items center
+  background white
+  height 50px
+  font-size 14px
+  text-transform uppercase
+  font-weight 300
+  color $text-color
+  transition 0.15s
+  &::placeholder
+    color lighten($text-color, 15)
+    opacity 1
+
+  &,
+  &:active,
+  &.active
+    &:focus,
+    &.focus,
+    &.ik_select_link_focus
+      outline 0
+      border-color $blue-1
+
+  &:active,
+  &.active
+    outline 0
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] &
+    cursor $cursor-disabled
+    opacity 0.5
+    box-shadow none
+    pointer-events none
+
+  &_invalid
+    border-color #c52e3c !important
+
+  &_area
+    height 100px
+    padding-top 14px
+    padding-bottom 12px
+    resize vertical
+  &_select
+    position relative
+    cursor pointer
+    padding-right 30px
+    &:before
+      content ''
+      position absolute
+      top 50%
+      right 10px
+      width 8px
+      height 8px
+      margin -6px 0
+      border-top 1px solid $text-color
+      border-right 1px solid $text-color
+      transform rotate(135deg)
+    &.ik_select_link_opened
+      &:before
+        margin -2px 0
+        transform rotate(-45deg)
+    .ik_select_link_text
+      overflow hidden
+      white-space nowrap
+  &_collapsible
+    height 50px
+    &:focus
+      height 150px
+  &_type
+    &_1
+      border-color #6587a8
+      background transparent
+      color white
+      &::placeholder
+        color darken(#cfd9e0, 15)
+      &,
+      &:active,
+      &.active
+        &:focus,
+        &.focus
+          border-color white
+
+

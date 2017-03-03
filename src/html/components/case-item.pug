@@ -1,0 +1,9 @@
+mixin case-item(data)
+  article.-case-item&attributes(attributes)
+    .__inner
+      +img(data.img, data.title, 'fit').__img
+      +a(pages.caseView.url).__overlay
+        h2.__title= data.title
+        .__category= data.category
+        .__icon-view.icon.icon-circle-plus
+

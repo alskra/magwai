@@ -1,0 +1,50 @@
+.header-section
+  text-align center
+  padding 30px 0
+  p
+    margin 0
+    max-width none
+  &__title
+    text-align center
+    font-size 20px
+    letter-spacing 0.025em
+    margin 0
+    padding-bottom 15px
+    background linear-gradient($blue-2, $blue-2) no-repeat 50% 100%/65px 2px
+    &_text
+      &_left
+        text-align left
+        background-position 0 100%
+  &__subtitle
+    text-transform uppercase
+    letter-spacing 0.05em
+    font-size 12px
+    margin-top 17px
+  &__description
+    margin-top 25px
+  &__icon
+    color $blue-1
+    display block
+    font-size 42px
+    line-height 1
+    margin-bottom 25px
+  &_about
+    & {$p}__title
+      color $blue-1
+      background none
+      padding-bottom 0
+  &_main
+    padding-bottom 0
+  &_error
+    & {$p}__title
+      color inherit
+    & {$p}__icon
+      font-size 58px
+      margin-bottom 15px
+
+  @media (min-width: $screen-md-min)
+    &_main
+      padding 30px 0
+    &_error
+      & {$p}__title
+        color $headings-color

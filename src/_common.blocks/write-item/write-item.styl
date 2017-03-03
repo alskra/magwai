@@ -1,0 +1,34 @@
+.write-item
+  padding-top 25px
+  border-top 1px solid #e8edf1
+  margin-top 25px
+  transition 0.15s
+  &:first-child
+    padding-top 0
+    border-top 0
+    margin-top 0
+  p
+    margin 0
+    display inline
+  &__inner
+    display block
+    color $text-color !important
+    text-decoration none !important
+    transition inherit
+    &:hover
+      & {$p}__title, & {$p}__icon-read
+        color $blue-1
+  &__title
+    font-size 14px
+    font-weight 700
+    margin 0 0 10px
+    transition inherit
+  &__text
+    line-height (20/14)em
+    //max-height @line-height*4em
+    overflow hidden
+    transition inherit
+  &__icon-read
+    font-size 9px
+    margin-left 10px
+    transition inherit

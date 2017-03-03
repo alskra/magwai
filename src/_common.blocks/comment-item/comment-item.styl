@@ -1,0 +1,64 @@
+.comment-item
+  padding-top 20px
+  border-top 1px solid #e8edf1
+  margin-top 20px
+  &:first-child
+    padding-top 0
+    border-top 0
+    margin-top 0
+  p
+    &:last-child
+      margin 0
+  &__inner
+    display flex
+  &__col
+    &_left
+      flex none
+      margin 0 12px 0 0
+    &_right
+      flex 1 1 auto
+  &__user-avatar-wrap
+    square 42px
+    overflow hidden
+    border-radius 50%
+    background inline-image('user.svg') no-repeat 50% #e8edf1
+    margin 0 auto 10px
+  &__user-avatar
+    width 100%
+    height 100%
+    background-color white
+  &__header
+    margin 5px 0 12px
+  &__user-name
+    font-size 12px
+    margin 0 0 5px
+  &__date
+    font-size 11px
+    text-transform uppercase
+    margin 0 0 5px
+  &__footer
+    margin 12px 0 0
+  &__reply-btn
+    display inline-block
+    color inherit
+    text-decoration none !important
+    font-size 11px
+    line-height 1.25em
+    text-transform uppercase
+    &:hover, &:focus
+      color $headings-color
+      & {$p}__reply-icon
+        color $headings-color
+  &__reply-icon
+    display inline-block
+    vertical-align top
+    color #c1cfd8
+    font-size 9px
+    margin-left 5px
+    transition inherit
+  &__reply-item
+    margin-left 45px
+
+  @media (min-width $screen-sm-min)
+    &__user-avatar-wrap
+      square 62px

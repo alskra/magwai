@@ -1,0 +1,44 @@
+include helpers/variables
+include helpers/mixins
+include components/doctype
+include components/header
+include components/content
+include components/footer
+include components/menu
+
+include components/breadcrumbs
+include components/filters
+include components/cases-list
+
++doctype(pages.cases.title)
+  +menu(menuList, [pages.cases.url])
+  .-wrapper
+    +header
+    +content
+      .__columns
+        +__column_left
+          +breadcrumbs([pages.index, pages.cases])
+          form.-form-search(action='/')
+            input.__field(type='search' placeholder='Поиск кейсов')
+            button.__btn.icon.icon-search(type='submit')
+          +filters(filters, true).visible-md.visible-lg
+          header.-header-section._main.visible-md.visible-lg
+            .container-fluid
+              .row
+                .col-sm-10.col-sm-offset-1.col-md-12.col-md-offset-0
+                  .h1.-header-section.__title Наши кейсы
+                  .-header-section.__description
+                    p Веб-студия «Магвай» помогает заказчикам выстраивать взаимоотношения с целевой аудиторией в Интернете.
+                    p Мы разрабатываем веб-проекты и помогаем бизнесу привлекать клиентов с 2009 года.
+
+        main.__column._center
+          section.-section._type_2#section_cases
+            .container-fluid
+              h1.-section.__title.hidden-md.hidden-lg Наши кейсы
+            +filters(filters, true)(data-section='section_cases').hidden-md.hidden-lg
+            +cases-list(casesList)
+
+            footer.-footer-section.section__footer
+              .container-fluid
+                +a().-btn._type_1 #[span.__label Больше работ]
+    +footer

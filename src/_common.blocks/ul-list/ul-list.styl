@@ -1,0 +1,17 @@
+.ul-list
+  position relative
+  list-style none
+  padding-left 20px
+  >li
+    margin 5px 0
+    &:before
+      content '\2022'
+      font-weight 400
+      position absolute
+      left 0
+      color $blue-1
+  &_marker
+    &_mdash
+      >li
+        &:before
+          content '\2014'

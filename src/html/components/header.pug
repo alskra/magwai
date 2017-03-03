@@ -1,0 +1,24 @@
+mixin header()
+  // Header
+  header.-header&attributes(attributes)
+    .__inner.container-fluid.container-fluid_none-padding
+      button.-toggle-menu.hidden-md.hidden-lg(type='button')
+        span.__line
+        span.__line
+        span.__line
+      .__contacts.hidden-xs
+        .-select-region.dropdown
+          +a.__selected.dropdown-toggle(data-toggle="dropdown")
+            span.__icon.icon.icon-map-marker
+            | Волгоград
+            span.__icon.icon.icon-angle-down
+          ul.dropdown-menu
+            li
+              +a Location 1
+            li
+              +a Location 2
+            li
+              +a Location 3
+        a.__tel(href='tel:+78442367977') (8442) 36-79-77
+      a(href= pages.home.url title!='Главная &mdash; Magwai').-logo magwai
+  // /Header

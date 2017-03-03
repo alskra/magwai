@@ -1,0 +1,41 @@
+.footer
+  background white
+  .btn
+    margin 0 10px
+    &_on-index
+      display none
+  &__inner
+    border-top 1px solid #e8edf1
+    padding 30px 0 10px
+  &__inner-top
+    margin-bottom 12px
+  &__inner-middle
+    display flex
+    justify-content center
+    margin-bottom 30px
+  &__col
+    &_hidden
+      display none
+
+  @media (min-width $screen-md-min)
+    flex-grow 1
+    display flex
+    flex-flow column
+    .container-fluid
+      flex-grow 1
+      display flex
+      flex-flow column
+    &__inner
+      flex-grow 1
+      display flex
+      flex-flow column
+      border-top 0
+      padding 0 0 10px
+    &__inner-top
+      order 2
+      padding 0 25px
+    &__inner-middle
+      flex-grow 1
+      order 1
+    &__inner-bottom
+      order 3

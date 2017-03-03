@@ -1,0 +1,39 @@
+.link
+  &_type
+    &_undo
+      display inline-flex
+      align-items center
+      margin 7px 0
+      color inherit
+      text-decoration none !important
+      font-size 11px
+      line-height 1.25em
+      text-transform uppercase
+      font-weight 500
+      &:hover, &:focus
+        color $blue-1
+      &  {$p}__icon
+          font-size 9px
+          color inherit
+          margin 0 10px 0 0
+          transform rotateY(180deg)
+    &_prev, &_next
+      display inline-flex
+      align-items center
+      margin 7px 0
+      color inherit
+      text-decoration none !important
+      font-size 11px
+      line-height 1.25em
+      text-transform uppercase
+      font-weight 500
+      &:hover, &:focus
+        color $blue-1
+      &  {$p}__icon
+        font-size 9px
+        color inherit
+        margin 0 0 0 10px
+    &_prev
+      &  {$p}__icon
+        margin 0 10px 0 0
+        transform rotateY(180deg)

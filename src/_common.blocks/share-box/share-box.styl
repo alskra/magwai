@@ -1,0 +1,91 @@
+.share-box
+  display flex
+  flex-flow row wrap
+  justify-content center
+  align-items flex-start
+  margin-bottom -20px
+  &__item
+    display flex
+    font-size 11px
+    font-weight 500
+    line-height 27px
+    text-transform uppercase
+    position relative
+    margin-bottom 20px
+    &+&
+      margin-left 1px
+      &:before
+        content ''
+        position absolute
+        top 3px
+        left -1px
+        height 21px
+        border-right 1px solid #e8edf1
+    &+&_share
+      margin-left 20px
+      &:before
+        display none
+  &__btn
+    flex-grow 1
+    display flex
+    line-height inherit
+    padding 0 14px
+    cursor pointer
+    transition 0.15s
+    &:hover
+      color white !important
+      &>{$p}__counter
+        color white
+    &.icon-fb
+      font-size 17px
+      color $color-fb = #395aa4
+      &:hover
+        background-color $color-fb
+    &.icon-twitter
+      font-size 13px
+      color $color-tw = #00abf0
+      &:hover
+        background-color $color-tw
+    &.icon-vk
+      font-size 11px
+      color $color-vk = #778db2
+      &:hover
+        background-color $color-vk
+    &.icon-share
+      padding 0 5px
+      margin-left 5px
+      font-size 17px
+      color $blue-1
+      &:hover
+        background-color $blue-1
+    &.fa-whatsapp
+      font-size 19px
+      color $color-whatsapp = #00e676
+      &:hover
+        background-color $color-whatsapp
+    &.fa-google-plus
+      font-size 18px
+      color $color-google-plus = #db4437
+      &:hover
+        background-color $color-google-plus
+  &__counter
+    font-family $font-family-base
+    font-size 13px
+    margin-left 14px
+    color $text-color
+    transition inherit
+  &__share-list
+    min-width 0
+    max-width 250px
+    column-count 2
+    column-gap 0
+    & {$p}__item
+      page-break-inside avoid
+      margin-bottom 0
+    & {$p}__item+{$p}__item
+      margin-left 0
+      &:before
+        display none
+
+  @media (min-width $screen-sm-min)
+    justify-content flex-end

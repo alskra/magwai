@@ -1,0 +1,71 @@
+include helpers/variables
+include helpers/mixins
+include components/doctype
+include components/header
+include components/content
+include components/footer
+include components/menu
+
+include components/breadcrumbs
+
++doctype(pages.services.title)
+  +menu(menuList, [pages.services.url])
+  .-wrapper
+    +header
+    +content
+      .__columns
+        +__column_left
+          +breadcrumbs([pages.index, pages.services])
+          header.-header-section._main.visible-md.visible-lg
+            .container-fluid
+              .row
+                .col-sm-10.col-sm-offset-1.col-md-12.col-md-offset-0
+                  h1.-header-section.__title Наши услуги
+                  .-header-section.__description
+                    p Веб-студия «Магвай» помогает заказчикам выстраивать взаимоотношения с целевой аудиторией в Интернете.
+                    p Мы разрабатываем веб-проекты и помогаем бизнесу привлекать клиентов с 2009 года.
+
+        main.__column._center
+          section.-section._type_2
+            .container-fluid
+              h2.-section.__title.h1.hidden-md.hidden-lg Наши услуги
+
+            .-services-list
+              .__inner.container-fluid.container-fluid_none-padding
+                article.-service-item
+                  +a(pages.serviceView.url).__inner
+                    .__icon-title.icon.icon-devices
+                    h2.__title Разработка сайтов
+                    ul.ul-list
+                      li Корпоративный сайт
+                      li Интернет-магазин
+                      li Промо-сайт
+                      li Корпоративный портал
+                article.-service-item
+                  +a(pages.serviceView.url).__inner
+                    .__icon-title.icon.icon-ad
+                    h2.__title Интернет реклама
+                    ul.ul-list
+                      li Корпоративный сайт
+                      li Интернет-магазин
+                      li Промо-сайт
+                      li Корпоративный портал
+                article.-service-item
+                  +a(pages.serviceView.url).__inner
+                    .__icon-title.icon.icon-idea
+                    h2.__title Брендирование
+                    ul.ul-list
+                      li Корпоративный сайт
+                      li Интернет-магазин
+                      li Промо-сайт
+                      li Корпоративный портал
+                article.-service-item
+                  +a(pages.serviceView.url).__inner
+                    .__icon-title.icon.icon-settings
+                    h2.__title Веб-сервис
+                    ul.ul-list
+                      li Корпоративный сайт
+                      li Интернет-магазин
+                      li Промо-сайт
+                      li Корпоративный портал
+    +footer

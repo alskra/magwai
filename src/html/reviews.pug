@@ -1,0 +1,79 @@
+include helpers/variables
+include helpers/mixins
+include components/doctype
+include components/header
+include components/content
+include components/footer
+include components/menu
+
+include components/breadcrumbs
+
++doctype(pages.reviews.title)
+  +menu(menuList, [pages.about.url, pages.reviews.url])
+  .-wrapper
+    +header
+    +content
+      .__columns
+        +__column_left
+          +breadcrumbs([pages.index, {title: 'Студия', url: pages.about.url}, pages.reviews])
+          header.-header-section._main.visible-md.visible-lg
+            .container-fluid
+              .row
+                .col-sm-10.col-sm-offset-1.col-md-12.col-md-offset-0
+                  .h1.-header-section.__title Отзывы
+                  .-header-section.__description
+                    p Веб-студия «Магвай» помогает заказчикам выстраивать взаимоотношения с целевой аудиторией в Интернете.
+                    p Мы разрабатываем веб-проекты и помогаем бизнесу привлекать клиентов с 2009 года.
+
+        main.__column._center
+          section.-section
+            .container-fluid
+              h1.-section.__title.hidden-md.hidden-lg Отзывы
+
+              .-reviews-list
+                article.-review-item
+                  +a().__inner
+                    .__img-wrap
+                      +img('files/pics/reviews/logo_2.png', 'EDCOMM', 'fit', 'scale-down').__img
+                    h2.__title EDCOMM
+                    .__date 8 сентября 2016
+                    .__description.dot-ellipsis.dot-timer-update
+                      p «Поэтому стоит как можно больше стандартизировать и свести варианты доставки к 2-4 понятным пунктам с одинаковым ценнником внутри одного типа доставки. Если интернет-магазин торгует в одном регионе,» варианты доставки и стоимость указываем сразу. Не получается уместить (22 района города и везде разная стоимость доставки) – разворачиваем блок по клику При работе на много регионов, определяем город по ip и выводим данные о доставке для этого населенного пункта.
+                    .__view-link Посмотреть отзыв
+                      span.__view-link-icon.icon.icon-arr-right-2
+                article.-review-item
+                  +a().__inner
+                    .__img-wrap
+                      +img('files/pics/reviews/logo_3.png', 'АльфаСтрахование', 'fit', 'scale-down').__img
+                    h2.__title АльфаСтрахование
+                    .__date 5 сентября 2016
+                    .__description.dot-ellipsis.dot-timer-update
+                      p Raptus detrius sapienter imperiums cobaltum est. Animaliss accelerare in dexter sala! Sunt eleateses dignus pius, grandis magisteres. Cum ratione credere, omnes historiaes quaestio gratis, festus silvaes.
+                    .__view-link Посмотреть отзыв
+                      span.__view-link-icon.icon.icon-arr-right-2
+                article.-review-item
+                  +a().__inner
+                    .__img-wrap
+                      +img('files/pics/reviews/logo_4.png', 'Туристическая компания RF-Trip', 'fit', 'scale-down').__img
+                    h2.__title Туристическая компания RF-Trip
+                    .__date 3 сентября 2016
+                    .__description.dot-ellipsis.dot-timer-update
+                      p «Поэтому стоит как можно больше стандартизировать и свести варианты доставки к 2-4 понятным пунктам с одинаковым ценнником внутри одного типа доставки. Если интернет-магазин торгует в одном регионе,» варианты доставки и стоимость указываем сразу. Не получается уместить (22 района города и везде разная стоимость доставки) – разворачиваем блок по клику При работе на много регионов, определяем город по ip и выводим данные о доставке для этого населенного пункта.
+                    .__view-link Посмотреть отзыв
+                      span.__view-link-icon.icon.icon-arr-right-2
+                article.-review-item
+                  +a().__inner
+                    .__img-wrap
+                      +img('files/pics/reviews/the_ambience.png', 'The Ambience', 'fit', 'scale-down').__img
+                    h2.__title The Ambience
+                    .__date 1 сентября 2016
+                    .__description.dot-ellipsis.dot-timer-update
+                      p «Поэтому стоит как можно больше стандартизировать и свести варианты доставки к 2-4 понятным пунктам с одинаковым ценнником внутри одного типа доставки. Если интернет-магазин торгует в одном регионе,» варианты доставки и стоимость указываем сразу. Не получается уместить (22 района города и везде разная стоимость доставки) – разворачиваем блок по клику При работе на много регионов, определяем город по ip и выводим данные о доставке для этого населенного пункта.
+                    .__view-link Посмотреть отзыв
+                      span.__view-link-icon.icon.icon-arr-right-2
+
+              hr.-hr._none-margin_all
+            footer.-footer-section.section__footer
+              .container-fluid
+                +a().-btn._type_1 #[span.__label Показать ещё]
+    +footer

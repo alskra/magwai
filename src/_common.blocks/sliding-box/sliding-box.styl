@@ -1,0 +1,72 @@
+.sliding-box
+  &__header
+    background-color #235180
+  &__header-inner
+    display flex
+    height 54px
+    position relative
+    z-index 10
+  &__ctrl
+    width 25%
+    display flex
+    flex-flow column
+    justify-content center
+    align-items center
+    text-align center
+    color white
+    font-weight  700
+    font-size 14px
+    line-height (20/14)em
+    text-transform uppercase
+    padding 15px
+    cursor pointer
+    position relative
+  &__ctrl-line
+    position absolute
+    top 0
+    left 0
+    width 25%
+    height 100%
+    background-color #194470
+    border-bottom 5px solid $blue-2
+    transition 0.3s ease
+    pointer-events none
+    &:before
+      content ''
+      position absolute
+      top 100%
+      left 50%
+      margin 4px -10px
+      border-top 12px solid $blue-2
+      border-left 10px solid transparent
+      border-right 10px solid transparent
+  &__ctrl-icon
+    color $blue-2
+    font-size 24px
+    &.icon-ad
+      font-size 27px
+    &.icon-idea
+      font-size 30px
+    &.icon-settings
+      font-size 29px
+  &__ctrl-label
+    width 100%
+    white-space nowrap
+    overflow hidden
+    text-overflow ellipsis
+  &__slider
+    background-color #f1f5f8
+
+
+  @media (min-width: $screen-sm-min)
+    &__header-inner
+      height 150px
+    &__ctrl-icon
+      margin 0 0 30px
+      font-size 30px
+      &.icon-ad
+        font-size 33px
+      &.icon-idea
+        font-size 36px
+      &.icon-settings
+        font-size 35px

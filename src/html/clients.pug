@@ -1,0 +1,86 @@
+include helpers/variables
+include helpers/mixins
+include components/doctype
+include components/header
+include components/content
+include components/footer
+include components/menu
+
+include components/breadcrumbs
+
++doctype(pages.clients.title)
+  +menu(menuList, [pages.clients.url])
+  .-wrapper
+    +header
+    +content
+      .__columns
+        +__column_left
+          +breadcrumbs([pages.index, pages.clients])
+          header.-header-section._main.visible-md.visible-lg
+            .container-fluid
+              .row
+                .col-sm-10.col-sm-offset-1.col-md-12.col-md-offset-0
+                  .h1.-header-section.__title Клиенты
+                  .-header-section.__description
+                    p Веб-студия «Магвай» помогает заказчикам выстраивать взаимоотношения с целевой аудиторией в Интернете.
+                    p Мы разрабатываем веб-проекты и помогаем бизнесу привлекать клиентов с 2009 года.
+
+        main.__column._center
+          section.-section
+            .container-fluid
+              h1.-section.__title.hidden-md.hidden-lg Клиенты
+
+              p Создание  идеи. Каждый наш сайт – это, прежде всего, оригинальная идея, разработанная специально для заказчика. Разрабатывая идею, мы предлагаем решение - как необычно и ярко представить компанию в сети, не забывая при этом об удобстве пользования сайтом.
+              p Реализация идеи в дизайне. Дизайнер рисует макеты страниц сайта, иллюстрирующие эту идею.
+              p Программирование сайта. Выбранные вами функциональные возможности воплощаются в готовом продукте. Каждый сайт снабжается удобной системой управления, позволяющие вам самостоятельно вносить изменения на сайт.
+              div &nbsp;
+
+              .-clients-list
+                article.-client-item
+                  +a().__inner
+                    .__img-wrap
+                      +img('files/pics/clients/Layer-181.png', 'Мегафон', 'fit', 'scale-down').__img
+                    h2.__title Мегафон
+                    .__description.dot-ellipsis.dot-timer-update
+                      p «Поэтому стоит как можно больше стандартизировать и свести варианты доставки к 2-4 понятным пунктам с одинаковым ценнником внутри одного типа доставки. Если интернет-магазин торгует в одном регионе,» варианты доставки и стоимость указываем сразу. Не получается уместить (22 района города и везде разная стоимость доставки) – разворачиваем блок по клику При работе на много регионов, определяем город по ip и выводим данные о доставке для этого населенного пункта.
+                article.-client-item
+                  +a().__inner
+                    .__img-wrap
+                      +img('files/pics/clients/Layer-192.png', 'АльфаСтрахование', 'fit', 'scale-down').__img
+                    h2.__title АльфаСтрахование
+                    .__description.dot-ellipsis.dot-timer-update
+                      p Aonidess sunt hydras de nobilis impositio. Audax, domesticus.
+                article.-client-item
+                  +a().__inner
+                    .__img-wrap
+                      +img('files/pics/clients/Layer-20.png', 'Intouch Страхование', 'fit', 'scale-down').__img
+                    h2.__title Intouch Страхование
+                    .__description.dot-ellipsis.dot-timer-update
+                      p Каждый наш сайт – это, прежде всего, оригинальная идея, разработанная специально для заказчика.Разрабатывая идею, мы предлагаем решение - как необычно и ярко представить компанию в сети, не забывая при этом об удобстве пользования сайтом.
+                article.-client-item
+                  +a().__inner
+                    .__img-wrap
+                      +img('files/pics/clients/callbackhunter.png', 'Callback Hunter', 'fit', 'scale-down').__img
+                    h2.__title Callback Hunter
+                    .__description.dot-ellipsis.dot-timer-update
+                      p «Поэтому стоит как можно больше стандартизировать и свести варианты доставки к 2-4 понятным пунктам с одинаковым ценнником внутри одного типа доставки. Если интернет-магазин торгует в одном регионе,» варианты доставки и стоимость указываем сразу. Не получается уместить (22 района города и везде разная стоимость доставки) – разворачиваем блок по клику При работе на много регионов, определяем город по ip и выводим данные о доставке для этого населенного пункта.
+                article.-client-item
+                  +a().__inner
+                    .__img-wrap
+                      +img('files/pics/clients/Layer-221.png', '1С Битрикс', 'fit', 'scale-down').__img
+                    h2.__title 1С Битрикс
+                    .__description.dot-ellipsis.dot-timer-update
+                      p Каждый наш сайт – это, прежде всего, оригинальная идея, разработанная специально для заказчика.Разрабатывая идею, мы предлагаем решение - как необычно и ярко представить компанию в сети, не забывая при этом об удобстве пользования сайтом.
+                article.-client-item
+                  +a().__inner
+                    .__img-wrap
+                      +img('files/pics/clients/SPSR_logo2016.png', 'SPSR Express', 'fit', 'scale-down').__img
+                    h2.__title SPSR Express
+                    .__description.dot-ellipsis.dot-timer-update
+                      p Каждый наш сайт – это, прежде всего, оригинальная идея, разработанная специально для заказчика.Разрабатывая идею, мы предлагаем решение - как необычно и ярко представить компанию в сети, не забывая при этом об удобстве пользования сайтом.
+
+              hr.-hr._none-margin_all
+            footer.-footer-section.section__footer
+              .container-fluid
+                +a().-btn._type_1 #[span.__label Показать ещё]
+    +footer

@@ -1,0 +1,56 @@
+.client-item
+  align-self flex-start
+  width calc(100% - 30px)
+  margin 0 15px 45px
+  transition 0.15s
+  &:hover
+    & {$p}__img-wrap
+      &:before
+        border-color: darken(#e8edf1, 15)
+    & {$p}__title
+      color $blue-1
+  p
+    margin 0
+  &__inner
+    display block
+    color $text-color !important
+    text-decoration none !important
+    transition inherit
+  &__img-wrap
+    position relative
+    padding-top unquote('calc(' + percentage(175/280) + ' - 60px)')
+    border 30px solid transparent
+    margin 0 0 20px
+    background-color white
+    transition inherit
+    &:before
+      content ''
+      position absolute
+      top -30px
+      left -30px
+      right -30px
+      bottom -30px
+      border: 1px solid #e8edf1
+      transition inherit
+  &__img
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+  &__title
+    font-size 14px
+    margin 0 0 12px
+    transition inherit
+  &__description
+    line-height (20/14)em
+    max-height @line-height*4em
+    overflow hidden
+
+  @media (min-width 640px)
+    width calc(50% - 30px)
+
+  @media (min-width $screen-sm-min)
+    width unquote('calc(' + percentage(1/3) + ' - 30px)')
+    &__img-wrap
+      padding-top unquote('calc(' + percentage(1/1) + ' - 60px)')

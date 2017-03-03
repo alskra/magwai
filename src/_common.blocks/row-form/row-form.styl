@@ -1,0 +1,24 @@
+.row-form
+  clearfix()
+  margin-bottom 16px
+  position relative
+  .field, .select
+    width 100%
+    &:focus
+      &+{$p}__icon
+        color $blue-1
+  &__icon
+    position absolute
+    top 0
+    right 15px
+    height 46px
+    display flex
+    justify-content center
+    align-items center
+    font-size 16px
+    color $text-color
+    pointer-events none
+    transition 0.15s
+  &_has-icon
+    .field
+      padding-right 40px

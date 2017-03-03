@@ -1,0 +1,24 @@
+include case-item
+
+-
+  var casesList = [
+    {img: 'files/pics/portfolio/project1.jpg', title: 'BEEFY BURGERS', category: 'Айдентика / Логотипы'},
+    {img: 'files/pics/portfolio/project2.jpg', title: 'Ferox hippotoxota sensim demittos buxum est.', category: 'Раздел / Hercle, idoleum bi-color!, audax vox!'},
+    {img: 'files/pics/portfolio/project3.jpg', title: 'Заголовок', category: 'Раздел / Подраздел'},
+    {img: 'files/pics/portfolio/project7.jpg', title: 'Заголовок', category: 'Раздел / Подраздел'},
+    {img: 'files/pics/portfolio/project8.jpg', title: 'Заголовок', category: 'Раздел / Подраздел'},
+    {img: 'files/pics/portfolio/project9.jpg', title: 'Заголовок', category: 'Раздел / Подраздел'},
+    {img: 'files/pics/portfolio/carrybase.jpg', title: 'Заголовок', category: 'Раздел / Подраздел'},
+    {img: 'files/pics/portfolio/jolly-porker_1x.jpg', title: 'Заголовок', category: 'Раздел / Подраздел'},
+    {img: 'files/pics/portfolio/orioles_big.jpg', title: 'Заголовок', category: 'Раздел / Подраздел'},
+    {img: 'files/pics/portfolio/hp.jpg', title: 'Заголовок', category: 'Раздел / Подраздел'},
+    {img: 'files/pics/portfolio/explorers_club_europa.jpg', title: 'Заголовок', category: 'Раздел / Подраздел'},
+    {img: 'files/pics/portfolio/aid_vinyl_4.jpg', title: 'Заголовок', category: 'Раздел / Подраздел'}
+  ]
+
+mixin cases-list(data)
+  // Cases-list
+  .-cases-list&attributes(attributes)
+    each item, index in data
+      +case-item(item)
+  // /Cases-list

@@ -1,0 +1,78 @@
+.vacancy-item
+  border-top 1px solid #e8edf1
+  border-bottom 1px solid #e8edf1
+  margin -1px 0
+  p
+    &:last-child
+      margin 0
+  &__title
+    font-weight 700
+    font-size 14px
+    text-transform uppercase
+    line-height 1.25em
+    position relative
+    cursor pointer
+    white-space nowrap
+    overflow hidden
+    text-overflow ellipsis
+    padding 19px 30px 17px 0
+    margin 0
+    transition 0.15s
+    &:hover
+      color $blue-1
+      & {$p}__title-salary
+        color $blue-1
+      & {$p}__title-icon
+        &:before, &:after
+          background $blue-1
+  &__title-salary
+    color #95acbc
+    display block
+    font-size 12px
+    transition inherit
+  &__title-icon
+    position absolute
+    right 0
+    height 1.25em
+    display flex
+    flex-flow column
+    justify-content center
+    align-items center
+    transition inherit
+    &:before, &:after
+      content ''
+      width 14px
+      height 2px
+      border-radius 1px
+      background $headings-color
+      transition inherit
+    &:before
+      margin-bottom -2px
+    &:after
+      transform rotate(90deg)
+  &__collapsible
+    display none
+    padding 25px 0
+    border-top 1px solid #e8edf1
+  &__footer
+    padding 25px 0
+    margin-bottom -25px
+    text-align center
+  &__salary
+    color $blue-1
+    text-transform uppercase
+    font-weight 700
+  &_opened
+    & {$p}__title
+      color $blue-1
+    & {$p}__title-salary
+      color $blue-1
+    & {$p}__title-icon
+      &:before, &:after
+        background $blue-1
+      &:after
+        width 0
+
+  @media (min-width $screen-sm-min)
+    &__title-salary
+      display inline

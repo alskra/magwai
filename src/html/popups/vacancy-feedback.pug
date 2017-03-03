@@ -1,0 +1,29 @@
+form.-form-vacancy-feedback.modal
+  button.-modal.__btn-close.btn.icon.icon-close.arcticmodal-close
+  header.-modal.__header
+    h1.__title Форма отправки резюме
+  .__row.row-form
+    input.-field._type_1(type='text' placeholder='ФИО*')
+  .__row._1
+    .__row._1_1.row-form
+      input.-field._type_1(type='text' placeholder='Семейное положение')
+    .__row._1_2.row-form
+      input.-field._type_1(type='number' min='16' placeholder='Возраст')
+  .__row.row-form
+    input.-field._type_1(type='tel' placeholder='Телефон')
+  .__row.row-form
+    input.-field._type_1._invalid(type='email' placeholder='Ваш E-Mail*')
+    .-info-form._error Введите Ваш E-Mail
+  .__row.row-form
+    textarea.-field._area._collapsible._type_1(placeholder='Образование')
+  .__row.row-form
+    textarea.-field._area._collapsible._type_1(placeholder='Опыт работы')
+  footer.-modal.__footer
+    .-form-vacancy-feedback.__row._2
+      .__row._2_1.row-form
+        label.-upload-file
+          input.__field(type='file')
+          .__btn.btn.js-tooltip(data-placement='right' title='Прикрепить файл резюме')
+          .__src
+      .__row._2_2.row-form
+        button.-btn._type_1(type='submit') #[span.__label Отправить]

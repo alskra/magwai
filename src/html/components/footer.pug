@@ -1,0 +1,43 @@
+include social
+
+mixin footer()
+  // Footer
+  footer.-footer&attributes(attributes)
+    .container-fluid
+      .-footer.__inner
+        .__inner-top.row
+          .__col.col-xs-12.col-sm-12
+            .-contact-data
+              span.__icon.icon.icon-map-marker
+              | 400087, Волгоград, ул. Двинская, 11а
+              .__small Наш адрес
+          .clearfix
+          .__col.col-xs-6.col-sm-3.col-md-6
+            .-contact-data
+              span.__icon.icon.icon-phone
+              +a('tel:+78442367977') (8442) 36-79-77
+              .__small Звоните нам
+          .__col.col-xs-6.col-sm-3.col-md-6
+            .-contact-data
+              span.__icon.icon.icon-microphone
+              +a('skype:magwai') magwai
+              .__small skype
+          .__col.col-xs-6.col-sm-3.col-md-6
+            .-contact-data
+              span.__icon.icon.icon-logo-2
+              +aMail('info@magwai.ru')
+              .__small наша почта
+          .__col.col-xs-6.col-sm-3.col-md-6
+            .-contact-data
+              span.__icon.icon.icon-clock
+              | с 9:00 до 18:00
+              .__small мы работаем
+        .__inner-middle
+          +a(pages.index.url).-btn._type_1._on-index.hidden-xs.hidden-sm #[span.__label На главную]
+          +a().-btn._type_1 #[span.__label Напишите нам]
+        .__inner-bottom
+          +social
+
+
+
+  // /Footer

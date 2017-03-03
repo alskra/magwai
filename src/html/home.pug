@@ -1,0 +1,28 @@
+include helpers/variables
+include helpers/mixins
+include components/doctype
+
++doctype(pages.home.title)._page_home
+  header.__header
+    .container-fluid
+      .row
+        .col-sm-8.col-sm-offset-1
+          h1.-page.__title #{resetCase(pkg.name)}
+            small &nbsp;#{pkg.version}&nbsp;
+              +a('../dist/' + pkg.name.toLowerCase() + '-' + pkg.version + '.zip') Download ZIP
+  main
+    .container-fluid
+      .row
+        .col-sm-4.col-sm-offset-1
+          h2= pages.home.title
+          ol.-list-pages
+            each page, index in pages
+              if index !== 'home'
+                li
+                  +a(page.url) #{page.title} #[small (#{page.url})]
+        .col-sm-4.col-sm-offset-1
+          h2 Popups
+          ol.-list-pages
+            each modal, index in modals
+              li
+                +a(modal.url)(data-toggle='modal-ajax') #{modal.title} #[small (#{modal.url})]

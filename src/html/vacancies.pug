@@ -1,0 +1,214 @@
+include helpers/variables
+include helpers/mixins
+include components/doctype
+include components/header
+include components/content
+include components/footer
+include components/menu
+
+include components/breadcrumbs
+
++doctype(pages.vacancies.title)
+  +menu(menuList, [pages.about.url, pages.vacancies.url])
+  .-wrapper
+    +header
+    +content
+      .__columns
+        +__column_left
+          +breadcrumbs([pages.index, {title: 'Студия', url: pages.about.url}, pages.vacancies])
+          header.-header-section._main.visible-md.visible-lg
+            .container-fluid
+              .row
+                .col-sm-10.col-sm-offset-1.col-md-12.col-md-offset-0
+                  .h1.-header-section.__title Вакансии
+                  .-header-section.__description
+                    p Веб-студия «Магвай» помогает заказчикам выстраивать взаимоотношения с целевой аудиторией в Интернете.
+                    p Мы разрабатываем веб-проекты и помогаем бизнесу привлекать клиентов с 2009 года.
+
+        main.__column._center
+          section.-section
+            .container-fluid
+              h1.-section.__title.hidden-md.hidden-lg Вакансии
+
+              .-vacancies-list
+                article.-vacancy-item
+                  header.__header
+                    h2.__title
+                      span.__title-icon
+                      | Финансовый консультант
+                      span.__title-salary &nbsp;/&nbsp;от 20 300 руб.
+                  .__collapsible
+                    .__content
+                      p Разыскивается ответственный помощник руководителя. Как и с ценой, кнопку покупки делаем бросающейся в глаза. В тексте используют варианты «в корзину», «добавить в корзину», «купить». Мне близок последний вариант, как однозначный и побуждающий к действию.
+                      div &nbsp
+                      dl.-columns._type_1
+                        dt Обязанности:
+                        dd
+                          ul.-ul-list
+                            li электронная переписка
+                            li работа с договорами
+                            li счетами
+                        dt Требования:
+                        dd
+                          ul.-ul-list
+                            li высшее образование
+                            li опыт работы от 3-х лет
+                        dt Условия:
+                        dd
+                          ul.-ul-list
+                            li полный соц.пакет
+                            li график 5/2 ( с 9-00 до 18-00) суббота, воскресенье выходной
+                            li заработная плата 2 раза в месяц
+                        dt Ключевые навыки:
+                        dd
+                          ul.-ul-list
+                            li Планирование рабочего дня руководителя
+                            li Обеспечение жизнедеятельности офиса
+                            li Прием посетителей
+                            li Делопроизводство
+                            li Организация деловых поездок
+                            li Контроль исполнения решений
+                            li Исполнение личных поручений руководителя
+                            li Прием и распределение звонков
+                        dt Тип занятости:
+                        dd
+                          ul.-ul-list
+                            li Полная занятость, полный день
+                    footer.__footer
+                      +a('popups/vacancy-feedback.html').-btn._type_1(data-toggle='modal-ajax') #[span.__label Откликнуться на вакансию]
+                article.-vacancy-item
+                  header.__header
+                    h2.__title
+                      span.__title-icon
+                      | Помощник руководителя
+                      span.__title-salary &nbsp;/&nbsp;от 20 300 до 20 300 руб.
+                  .__collapsible
+                    .__content
+                      p Разыскивается ответственный помощник руководителя. Как и с ценой, кнопку покупки делаем бросающейся в глаза. В тексте используют варианты «в корзину», «добавить в корзину», «купить». Мне близок последний вариант, как однозначный и побуждающий к действию.
+                      div &nbsp
+                      dl.-columns._type_1
+                        dt Обязанности:
+                        dd
+                          ul.-ul-list
+                            li электронная переписка
+                            li работа с договорами
+                            li счетами
+                        dt Требования:
+                        dd
+                          ul.-ul-list
+                            li высшее образование
+                            li опыт работы от 3-х лет
+                        dt Условия:
+                        dd
+                          ul.-ul-list
+                            li полный соц.пакет
+                            li график 5/2 ( с 9-00 до 18-00) суббота, воскресенье выходной
+                            li заработная плата 2 раза в месяц
+                        dt Ключевые навыки:
+                        dd
+                          ul.-ul-list
+                            li Планирование рабочего дня руководителя
+                            li Обеспечение жизнедеятельности офиса
+                            li Прием посетителей
+                            li Делопроизводство
+                            li Организация деловых поездок
+                            li Контроль исполнения решений
+                            li Исполнение личных поручений руководителя
+                            li Прием и распределение звонков
+                        dt Тип занятости:
+                        dd
+                          ul.-ul-list
+                            li Полная занятость, полный день
+                    footer.__footer
+                      +a('popups/vacancy-feedback.html').-btn._type_1(data-toggle='modal-ajax') #[span.__label Откликнуться на вакансию]
+                article.-vacancy-item
+                  header.__header
+                    h2.__title
+                      span.__title-icon
+                      | Директор по продажам
+                      span.__title-salary &nbsp;/&nbsp;от 40 000 руб.
+                  .__collapsible
+                    .__content
+                      p Разыскивается ответственный помощник руководителя. Как и с ценой, кнопку покупки делаем бросающейся в глаза. В тексте используют варианты «в корзину», «добавить в корзину», «купить». Мне близок последний вариант, как однозначный и побуждающий к действию.
+                      div &nbsp
+                      dl.-columns._type_1
+                        dt Обязанности:
+                        dd
+                          ul.-ul-list
+                            li электронная переписка
+                            li работа с договорами
+                            li счетами
+                        dt Требования:
+                        dd
+                          ul.-ul-list
+                            li высшее образование
+                            li опыт работы от 3-х лет
+                        dt Условия:
+                        dd
+                          ul.-ul-list
+                            li полный соц.пакет
+                            li график 5/2 ( с 9-00 до 18-00) суббота, воскресенье выходной
+                            li заработная плата 2 раза в месяц
+                        dt Ключевые навыки:
+                        dd
+                          ul.-ul-list
+                            li Планирование рабочего дня руководителя
+                            li Обеспечение жизнедеятельности офиса
+                            li Прием посетителей
+                            li Делопроизводство
+                            li Организация деловых поездок
+                            li Контроль исполнения решений
+                            li Исполнение личных поручений руководителя
+                            li Прием и распределение звонков
+                        dt Тип занятости:
+                        dd
+                          ul.-ul-list
+                            li Полная занятость, полный день
+                    footer.__footer
+                      +a('popups/vacancy-feedback.html').-btn._type_1(data-toggle='modal-ajax') #[span.__label Откликнуться на вакансию]
+                article.-vacancy-item
+                  header.__header
+                    h2.__title
+                      span.__title-icon
+                      | Бухгалтер
+                      span.__title-salary &nbsp;/&nbsp;от 60 000 руб.
+                  .__collapsible
+                    .__content
+                      p Разыскивается ответственный помощник руководителя. Как и с ценой, кнопку покупки делаем бросающейся в глаза. В тексте используют варианты «в корзину», «добавить в корзину», «купить». Мне близок последний вариант, как однозначный и побуждающий к действию.
+                      div &nbsp
+                      dl.-columns._type_1
+                        dt Обязанности:
+                        dd
+                          ul.-ul-list
+                            li электронная переписка
+                            li работа с договорами
+                            li счетами
+                        dt Требования:
+                        dd
+                          ul.-ul-list
+                            li высшее образование
+                            li опыт работы от 3-х лет
+                        dt Условия:
+                        dd
+                          ul.-ul-list
+                            li полный соц.пакет
+                            li график 5/2 ( с 9-00 до 18-00) суббота, воскресенье выходной
+                            li заработная плата 2 раза в месяц
+                        dt Ключевые навыки:
+                        dd
+                          ul.-ul-list
+                            li Планирование рабочего дня руководителя
+                            li Обеспечение жизнедеятельности офиса
+                            li Прием посетителей
+                            li Делопроизводство
+                            li Организация деловых поездок
+                            li Контроль исполнения решений
+                            li Исполнение личных поручений руководителя
+                            li Прием и распределение звонков
+                        dt Тип занятости:
+                        dd
+                          ul.-ul-list
+                            li Полная занятость, полный день
+                    footer.__footer
+                      +a('popups/vacancy-feedback.html').-btn._type_1(data-toggle='modal-ajax') #[span.__label Откликнуться на вакансию]
+    +footer

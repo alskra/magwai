@@ -1,0 +1,23 @@
+.arcticmodal-overlay,
+.arcticmodal-container { position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: $zindex-modal; }
+.arcticmodal-container { overflow: auto; margin: 0; padding: 0; border: 0; border-collapse: collapse; }
+*:first-child+html .arcticmodal-container { height: 100% }
+.arcticmodal-container_i {width: 100%; height: 100%; margin: 0 auto; table-layout: fixed}
+.arcticmodal-container_i2 { margin: 0; border: 0; vertical-align: middle; }
+.arcticmodal-error { border: 20px solid transparent; border-radius: 10px; background: #000; color: #fff; display: table; margin: 0 auto }
+@keyframes modal-loading
+  100%
+    transform rotate(360deg)
+.arcticmodal-loading
+  position absolute
+  width 30px
+  height 30px
+  border 3px solid white
+  border-right-color transparent
+  border-radius 50%
+  margin auto
+  top 0
+  left 0
+  right 0
+  bottom 0
+  animation modal-loading 1.2s linear infinite

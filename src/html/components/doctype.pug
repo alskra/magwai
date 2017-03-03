@@ -1,0 +1,18 @@
+mixin doctype(title)
+  doctype html
+  html(class="no-js" lang="ru")
+    head
+      meta(charset="utf-8")
+      meta(http-equiv="X-UA-Compatible" content="IE=edge")
+      meta(name="viewport" content="width=device-width, initial-scale=1")
+      title!= title ? title + ' &mdash; ' + resetCase(pkg.name) : resetCase(pkg.name)
+      // Favicons
+      each favicon in faviconCode.split('\n')
+        != '\n    ' + favicon
+      // CSS
+      link(href="css/main.css" rel="stylesheet")
+      // JS
+      script(src="js/components.js")
+      script(src="js/main.js")
+    body.-page&attributes(attributes)
+      block

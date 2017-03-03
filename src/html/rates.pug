@@ -1,0 +1,92 @@
+include helpers/variables
+include helpers/mixins
+include components/doctype
+include components/header
+include components/content
+include components/footer
+include components/menu
+
+include components/breadcrumbs
+include components/tags
+
++doctype(pages.rates.title)
+  +menu(menuList, [pages.about.url, pages.rates.url])
+  .-wrapper
+    +header
+    +content
+      .__columns
+        +__column_left
+          +breadcrumbs([pages.index, {title: 'Студия', url: pages.about.url}, pages.rates])
+          header.-header-section._main.visible-md.visible-lg
+            .container-fluid
+              .row
+                .col-sm-10.col-sm-offset-1.col-md-12.col-md-offset-0
+                  .h1.-header-section.__title Рейтинги
+                  .-header-section.__description
+                    p Веб-студия «Магвай» помогает заказчикам выстраивать взаимоотношения с целевой аудиторией в Интернете.
+                    p Мы разрабатываем веб-проекты и помогаем бизнесу привлекать клиентов с 2009 года.
+
+        main.__column._center
+          section.-section
+            .container-fluid
+              h1.-section.__title.hidden-md.hidden-lg Рейтинги
+
+              .-rates-list
+                .__inner
+                  article.-rate-item
+                    header.__header
+                      .__rate-info в рейтинге: #[span.__rate-value 97 место]
+                      .__rate-icon-wrap
+                        +img('files/pics/partners/tagline-logo_blue.png').__rate-icon
+                    h2.__title
+                      +a()(target='_blank').__title-link Теглайн
+                    +tags([2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022])
+                    .__text
+                      p Веб-студия «Магвай» помогает заказчикам выстраивать взаимоотношения с целевой аудиторией в Интернете. Мы разрабатываем веб-проекты и помогаем бизнесу привлекать клиентов с 2009 года.
+                    footer.__footer
+                      +a('http://tagline.ru/design-studios-rating/')(target='_blank').__rate-link http://tagline.ru/design-studios-rating/
+
+                  article.-rate-item
+                    header.__header
+                      .__rate-info в рейтинге: #[span.__rate-value 29 место]
+                      .__rate-icon-wrap
+                        +img('files/pics/partners/CMS_Magazine_blue.png').__rate-icon
+                    h2.__title
+                      +a()(target='_blank').__title-link Рейтинг рунета: Публичные компании
+                    +tags([2013, 2014, 2015])
+                    .__text
+                      p Веб-студия «Магвай» помогает заказчикам выстраивать взаимоотношения с целевой аудиторией в Интернете. Мы разрабатываем веб-проекты и помогаем бизнесу привлекать клиентов с 2009 года. Как и с ценой, кнопку покупки делаем бросающейся в глаза. В тексте используют варианты «в корзину», «добавить в корзину», «купить». Мне близок последний вариант, как однозначный и побуждающий к действию.
+                    footer.__footer
+                      +a('http://tagline.ru/design-studios-rating/')(target='_blank').__rate-link http://tagline.ru/design-studios-rating/
+
+                  article.-rate-item
+                    header.__header
+                      .__rate-info в рейтинге: #[span.__rate-value 24 место]
+                      .__rate-icon-wrap
+                        +img('files/pics/partners/CMS_Magazine_blue.png').__rate-icon
+                    h2.__title
+                      +a()(target='_blank').__title-link Рейтинг рунета
+                    +tags([2013, 2014, 2015])
+                    .__text
+                      p Веб-студия «Магвай» помогает заказчикам выстраивать взаимоотношения с целевой аудиторией в Интернете. Мы разрабатываем веб-проекты и помогаем бизнесу привлекать клиентов с 2009 года. Как и с ценой, кнопку покупки делаем бросающейся в глаза. В тексте используют варианты «в корзину», «добавить в корзину», «купить». Мне близок последний вариант, как однозначный и побуждающий к действию.
+                    footer.__footer
+                      +a('http://tagline.ru/design-studios-rating/')(target='_blank').__rate-link http://tagline.ru/design-studios-rating/
+
+                  article.-rate-item
+                    header.__header
+                      .__rate-info в рейтинге: #[span.__rate-value 9 место]
+                      .__rate-icon-wrap
+                        +img('files/pics/partners/logo_bitrix_blue.png').__rate-icon
+                    h2.__title
+                      +a()(target='_blank').__title-link 1с-Битрикс
+                    +tags([2012, 2013, 2014, 2015, 2016])
+                    .__text
+                      p Веб-студия «Магвай» помогает заказчикам выстраивать взаимоотношения с целевой аудиторией в Интернете. Мы разрабатываем веб-проекты и помогаем бизнесу привлекать клиентов с 2009 года.
+                    footer.__footer
+                      +a('http://tagline.ru/design-studios-rating/')(target='_blank').__rate-link http://tagline.ru/design-studios-rating/
+
+              hr.-hr._none-margin_all
+            footer.-footer-section.section__footer
+              .container-fluid
+                +a().-btn._type_1 #[span.__label Показать ещё]
+    +footer

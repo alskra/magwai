@@ -1,0 +1,48 @@
+include helpers/variables
+include helpers/mixins
+include components/doctype
+include components/header
+include components/content
+include components/footer
+include components/menu
+
+include components/breadcrumbs
+include components/filters
+
++doctype(pages.caseView.title)
+  +menu(menuList, [pages.cases.url, pages.caseView.url])
+  .-wrapper
+    +header
+    +content
+      .__columns
+        +__column_left
+          +breadcrumbs([pages.index, pages.cases, {title: 'Beefy Burgers', url: pages.caseView.url}])
+          +filters(['Интернет-магазин', 'Промо']).visible-md.visible-lg
+          header.-header-section._main.visible-md.visible-lg
+            .container-fluid
+              .row
+                .col-sm-10.col-sm-offset-1.col-md-12.col-md-offset-0
+                  .h1.-header-section.__title Beefy Burgers
+                  .-header-section.__description
+                    p Веб-студия «Магвай» помогает заказчикам выстраивать взаимоотношения с целевой аудиторией в Интернете.
+                    p Мы разрабатываем веб-проекты и помогаем бизнесу привлекать клиентов с 2009 года.
+
+        main.__column._center
+          article.-section._type_2
+            .container-fluid
+              h1.-section.__title.hidden-md.hidden-lg Beefy Burgers
+            +filters(['Интернет-магазин', 'Промо']).hidden-md.hidden-lg
+            .container-fluid
+              .-ill-box._none-margin_all
+                .__item.col-sm-6
+                  +img('files/pics/beefy-burgers1.jpg', 'Beefy Burgers').__img
+                .__item.col-sm-6
+                  +img('files/pics/beefy-burgers2.jpg', 'Beefy Burgers').__img
+            .-section._bg_braun
+              .container-fluid
+                p Каждый проходящий мимо вывески с этим логотипом поймет, что здесь находится цветовая палитра и стиль. Модные, современные и очень характерные для мясных лавок, холлов, бургерныхи кафе.
+            .container-fluid
+              .-ill-box._none-margin_all
+                .__item
+                  +img('files/pics/beefy-burgers3.jpg', 'Beefy Burgers').__img
+    +footer

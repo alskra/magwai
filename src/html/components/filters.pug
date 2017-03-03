@@ -1,0 +1,12 @@
+-
+  var filters = ['Все', 'Интернет-магазин', 'Landing Page', 'Сайт-визитка', 'Промо', 'Айдентика'];
+
+mixin filters(data, selectActive)
+  nav.-filters&attributes(attributes)
+    .__inner
+      .container-fluid
+        .-filters.__inner-2
+          .__scroll.ps-scroll(data-ps-scroll={"useBothWheelAxes": true})
+            each item, index in data
+              .__item
+                +a.__link(class={_current: index == 0 && selectActive})= item

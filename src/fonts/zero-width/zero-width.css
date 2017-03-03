@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'zero-width';
+  src: url('../fonts/zero-width/zero-width.eot');
+  src: url('../fonts/zero-width/zero-width.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/zero-width/zero-width.woff') format('woff'),
+  url('../fonts/zero-width/zero-width.ttf') format('truetype'),
+  url('../fonts/zero-width/zero-width.svg#zero-width') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}

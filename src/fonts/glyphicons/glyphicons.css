@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "glyphicons";
+  src: url('../fonts/glyphicons/glyphicons.eot');
+  src: url('../fonts/glyphicons/glyphicons.eot?#iefix') format('eot'),
+  url('../fonts/glyphicons/glyphicons.woff2') format('woff2'),
+  url('../fonts/glyphicons/glyphicons.woff') format('woff'),
+  url('../fonts/glyphicons/glyphicons.ttf') format('truetype'),
+  url('../fonts/glyphicons/glyphicons.svg#glyphicons') format('svg');
+}
+
+.icon:before {
+  font-family: "glyphicons";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  /* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+  text-decoration: none;
+  text-transform: none;
+  vertical-align: top;
+}
+
+
+.icon-ad:before {
+  content: "\E001";
+}
+
+.icon-angle-down:before {
+  content: "\E002";
+}
+
+.icon-angle-right:before {
+  content: "\E003";
+}
+
+.icon-arr-right-2:before {
+  content: "\E004";
+}
+
+.icon-arr-right:before {
+  content: "\E005";
+}
+
+.icon-be:before {
+  content: "\E006";
+}
+
+.icon-calendar:before {
+  content: "\E007";
+}
+
+.icon-circle-plus:before {
+  content: "\E008";
+}
+
+.icon-clock:before {
+  content: "\E009";
+}
+
+.icon-close:before {
+  content: "\E00A";
+}
+
+.icon-comment:before {
+  content: "\E00B";
+}
+
+.icon-devices:before {
+  content: "\E00C";
+}
+
+.icon-fb:before {
+  content: "\E00D";
+}
+
+.icon-idea:before {
+  content: "\E00E";
+}
+
+.icon-logo-2:before {
+  content: "\E00F";
+}
+
+.icon-logo:before {
+  content: "\E010";
+}
+
+.icon-map-marker:before {
+  content: "\E011";
+}
+
+.icon-microphone:before {
+  content: "\E012";
+}
+
+.icon-minus:before {
+  content: "\E013";
+}
+
+.icon-pen:before {
+  content: "\E014";
+}
+
+.icon-phone:before {
+  content: "\E015";
+}
+
+.icon-plus:before {
+  content: "\E016";
+}
+
+.icon-r-soc:before {
+  content: "\E017";
+}
+
+.icon-reply:before {
+  content: "\E018";
+}
+
+.icon-search:before {
+  content: "\E019";
+}
+
+.icon-settings:before {
+  content: "\E01A";
+}
+
+.icon-share:before {
+  content: "\E01B";
+}
+
+.icon-twitter:before {
+  content: "\E01C";
+}
+
+.icon-user:before {
+  content: "\E01D";
+}
+
+.icon-vk:before {
+  content: "\E01E";
+}

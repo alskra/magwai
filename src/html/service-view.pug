@@ -1,0 +1,202 @@
+include helpers/variables
+include helpers/mixins
+include components/doctype
+include components/header
+include components/content
+include components/footer
+include components/menu
+
+include components/breadcrumbs
+include components/filters
+include components/share-box
+
++doctype(pages.serviceView.title)
+  +menu(menuList, [pages.services.url, pages.serviceView.url])
+  .-wrapper
+    +header
+    +content
+      .__columns
+        +__column_left
+          +breadcrumbs([pages.index, pages.services, {title: 'Разработка сайтов', url: pages.serviceView.url}])
+          +filters(['Интернет-магазин', 'Промо']).visible-md.visible-lg
+          header.-header-section._main.visible-md.visible-lg
+            .container-fluid
+              .row
+                .col-sm-10.col-sm-offset-1.col-md-12.col-md-offset-0
+                  h1.-header-section.__title Разработка сайтов
+                  .-header-section.__description
+                    p Веб-студия «Магвай» помогает заказчикам выстраивать взаимоотношения с целевой аудиторией в Интернете.
+                    p Мы разрабатываем веб-проекты и помогаем бизнесу привлекать клиентов с 2009 года.
+        main.__column._center
+          article.-section
+            .container-fluid
+              h2.-section.__title.h1 Как мы разрабатываем сайт?
+
+              p Создание  идеи. Каждый наш #[+a сайт] – это, прежде всего, оригинальная идея, разработанная специально для заказчика. Разрабатывая идею, мы предлагаем решение - как необычно и ярко представить компанию в сети, не забывая при этом об удобстве пользования сайтом.
+              p Реализация идеи в дизайне. Дизайнер рисует макеты страниц сайта, иллюстрирующие эту идею.
+              p Программирование сайта. Выбранные вами функциональные возможности воплощаются в готовом продукте. Каждый сайт снабжается удобной системой управления, позволяющие вам самостоятельно вносить изменения на сайт.
+
+              .-gallery-slider
+                .__view.slick-slider
+                  .slick-slide
+                    .-gallery-slider.__view-item.loading.loading_before
+                      +img(null, null, 'fit')(data-lazy='files/pics/picjumbo.jpg').__view-img
+                  .slick-slide
+                    .-gallery-slider.__view-item.loading.loading_before
+                      +img(null, null, 'fit')(data-lazy='files/pics/picjumbo2.jpg').__view-img
+                  .slick-slide
+                    .-gallery-slider.__view-item.loading.loading_before
+                      +img(null, null, 'fit')(data-lazy='files/pics/picjumbo3.jpg').__view-img
+                  .slick-slide
+                    .-gallery-slider.__view-item.loading.loading_before
+                      +img(null, null, 'fit')(data-lazy='files/pics/unsplash_522af9ac823b4_1.jpg').__view-img
+
+                .__thumb
+                  .__thumb-inner.slick-slider
+                    .slick-slide
+                      .-gallery-slider.__thumb-item.loading.loading_before
+                        +img(null, null, 'fit')(data-lazy='files/pics/picjumbo.jpg').__thumb-img
+                    .slick-slide
+                      .-gallery-slider.__thumb-item.loading.loading_before
+                        +img(null, null, 'fit')(data-lazy='files/pics/picjumbo2.jpg').__thumb-img
+                    .slick-slide
+                      .-gallery-slider.__thumb-item.loading.loading_before
+                        +img(null, null, 'fit')(data-lazy='files/pics/picjumbo3.jpg').__thumb-img
+                    .slick-slide
+                      .-gallery-slider.__thumb-item.loading.loading_before
+                        +img(null, null, 'fit')(data-lazy='files/pics/unsplash_522af9ac823b4_1.jpg').__thumb-img
+
+              p Как и с ценой, кнопку покупки делаем бросающейся в глаза. В тексте используют варианты «в корзину», «добавить в корзину», «купить». Мне близок последний вариант, как однозначный и побуждающий к действию.
+              p Покупателю сразу показываем варианты доставки, стоимость и сроки. Типичный магазин использует 3 варианта доставки: курьерская, самовывоз из точки доставки, почтой РФ. Каждый вариант можно разделить еще на несколько, но основные эти. Пользователю стоит давать выбор, но не избыточный. Выбирать из 10 вариантов курьерской доставки с разным ценником трудно. Покупателю не интересно с кем из транспортных компаний у вас договор, его интересуют только сроки, цена и какой пункт выдачи ближе.
+              blockquote
+                p Обратите внимание на ссылку #[strong «Купить в один клик»]. По ней открывается форма, где покупатель заполняет номер телефона и имя. Вариант для тех, кто не разбирается в интернете.
+              p Поэтому стоит как можно больше стандартизировать и свести варианты доставки к 2-4 понятным пунктам с одинаковым ценнником внутри одного типа доставки. Если интернет-магазин торгует в одном регионе, варианты доставки и стоимость указываем сразу. Не получается уместить (22 района города и везде разная стоимость доставки) – разворачиваем блок по клику При работе на много регионов, определяем город по ip и выводим данные о доставке для этого населенного пункта.
+
+              .-table-wrap.ps-scroll
+                table.-table
+                  thead
+                    tr
+                      th №
+                      th Наименование
+                      th Описание
+                      th Стоимость
+                  tbody
+                    tr
+                      td 1
+                      td Наименование 1
+                      td Разработка сайтов
+                      td 154 900 #[span.fa.fa-rub]
+                    tr
+                      td 2
+                      td Наименование 2
+                      td SEO и контекстная реклама
+                      td 132 500 #[span.fa.fa-rub]
+                    tr
+                      td 3
+                      td Наименование 3
+                      td Таргетированная реклама
+                      td 168 000 #[span.fa.fa-rub]
+                    tr
+                      td 4
+                      td Наименование 4
+                      td Айдентика
+                      td 153 900 #[span.fa.fa-rub]
+                    tr
+                      td 5
+                      td Наименование 5
+                      td Интернет-реклама
+                      td 198 000 #[span.fa.fa-rub]
+                    tr
+                      td 6
+                      td Наименование 6
+                      td Брендирование
+                      td 120 000 #[span.fa.fa-rub]
+                    tr
+                      td 7
+                      td Наименование 7
+                      td Веб-сервис
+                      td 178 900 #[span.fa.fa-rub]
+
+              // Typography, Forms
+              .row
+                .col-xs-6.col-sm-3
+                  ol.-ol-list
+                    li Разработка сайтов
+                    li Интернет-реклама
+                    li Брендирование
+                    li Веб-сервис
+                .col-xs-6.col-sm-3
+                  ol.-ol-list._marker_cyr
+                    li(data-marker='а') Разработка сайтов
+                    li(data-marker='б') Интернет-реклама
+                    li(data-marker='в') Брендирование
+                    li(data-marker='г') Веб-сервис
+                .col-xs-6.col-sm-3
+                  ol.-ul-list
+                    li Разработка сайтов
+                    li Интернет-реклама
+                    li Брендирование
+                    li Веб-сервис
+                .col-xs-6.col-sm-3
+                  ol.-ul-list._marker_mdash
+                    li Разработка сайтов
+                    li Интернет-реклама
+                    li Брендирование
+                    li Веб-сервис
+
+              h1 Заголовок h1
+              p
+                +a Link&nbsp;
+              h2 Заголовок h2
+              p
+                strong Strong&nbsp;
+              h3 Заголовок h3
+              p
+                em Italic&nbsp;
+              h4 Заголовок h4
+              p
+                label.-checkbox
+                  input.__ctrl(type='checkbox' checked)
+                  span.__fake.fa.fa-check
+                  span.__label Checkbox
+                | &nbsp
+                label.-checkbox
+                  input.__ctrl(type='checkbox' disabled)
+                  span.__fake.fa.fa-check
+                  span.__label Checkbox
+              p
+                label.-radio
+                  input.__ctrl(type='radio' name='radio' checked)
+                  span.__fake.fa.fa-circle
+                  span.__label Radio
+                | &nbsp
+                label.-radio
+                  input.__ctrl(type='radio' name='radio')
+                  span.__fake.fa.fa-circle
+                  span.__label Radio
+              div
+                select.-select(data-linkcustomclass='field field_select' data-ddcustomclass='' data-ddfullwidth='true')
+                  option Option 1
+                  option Option 2
+                  option Option 3
+                  option Option 4
+                  option Option 5
+                  option Option 6
+                  option Option 7
+                  option Option 8
+              div &nbsp
+              div &nbsp
+              div &nbsp
+              div &nbsp
+              div &nbsp
+              // /Typography, Forms
+
+              hr.-hr._none-margin_bottom
+            footer.-footer-section.section__footer
+              .container-fluid
+                .row
+                  .col-sm-6.text-left.hidden-xs
+                    +a(pages.services.url).-link._type_undo #[span.__icon.icon.icon-arr-right-2]Вернуться назад
+                  .col-sm-6
+                    +share-box
+    +footer

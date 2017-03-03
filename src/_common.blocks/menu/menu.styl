@@ -1,0 +1,147 @@
+.menu
+  position fixed
+  background-color #295786
+  font-weight 900
+  color white
+  font-size 13px
+  line-height 1.2em
+  text-transform uppercase
+  display none
+  &__item
+    &_lvl_1
+      border-bottom 1px solid #3f6892
+    &_lvl_2
+      border-top 1px solid #3f6892
+    &_submenu
+      &>{$p}__btn
+        &>{$p}__icon
+          &:before, &:after
+            width 18px
+            border-radius 1px
+            transform-origin 50% 50%
+          &:before
+            margin-bottom -2px
+            transform rotate(0deg)
+          &:after
+            transform rotate(90deg)
+    &_opened
+      &>{$p}__btn
+        &>{$p}__icon
+          &:after
+            width 0
+    &_current
+      &>{$p}__btn
+        box-shadow inset 4px 0 $blue-1
+  &__btn
+    display flex
+    align-items center
+    height 54px
+    color white
+    background-color #295786
+    text-decoration none !important
+    cursor pointer
+    transition 0.15s
+    &:hover, &:focus
+      color white
+    &:active
+      color white
+      background-color #6587a8
+      transition none
+    &_lvl_2
+      color #5682b2
+      background-color #1c446c
+      &:hover, &:focus
+        color #5682b2
+      &:active
+        color white
+  &__label
+    flex 1 1 auto
+    padding 0 15px
+    overflow hidden
+    white-space nowrap
+    text-overflow ellipsis
+  &__icon
+    flex 0 0 58px
+    align-self stretch
+    display flex
+    flex-flow column
+    justify-content center
+    align-items center
+    position relative
+    transition 0.15s
+    &:before, &:after
+      content ''
+      width 12px
+      height 2px
+      background #fff
+      border-radius 1px 0 0 1px
+      transform-origin 100% 50%
+      transition inherit
+    &:before
+      margin-bottom -3px
+      transform rotate(45deg)
+    &:after
+      transform rotate(-45deg)
+  &__submenu
+    background-color #1c446c
+    display none
+    .container-fluid
+      padding 0
+
+
+  @media (min-width $screen-md-min)
+    position static
+    display flex
+    &__item
+      &_lvl_1
+        border-bottom 0
+      &_lvl_2
+        border-top 0
+      &_opened
+        &>{$p}__btn
+          color white !important
+          box-shadow inset 0 -4px $blue-1
+          position relative
+          z-index 2
+          &:before
+            opacity 1
+      &_current
+        &>{$p}__btn
+          color white !important
+          box-shadow inset 0 -4px $blue-1
+    &__btn
+      color #5682b2
+      &:hover, &:focus
+        color #5682b2
+        box-shadow inset 0 -4px $blue-1
+      &:active
+        color white
+      &:before
+        content ''
+        position absolute
+        top 100%
+        left 50%
+        border-top 7px solid $blue-1
+        border-left 6px solid transparent
+        border-right 6px solid transparent
+        margin 0 -6px
+        opacity 0
+        transition inherit
+    &__icon
+      display none
+    &__submenu
+      position absolute
+      top 54px
+      left 0
+      width 100%
+      &:before
+        content ''
+        position absolute
+        top 0
+        left 0
+        width 100%
+        height 100%
+        pointer-events none
+        box-shadow inset 0 13px 10px -10px rgba(black, 0.2)
+      .container-fluid
+        display flex

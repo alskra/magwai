@@ -1,0 +1,246 @@
+include helpers/variables
+include helpers/mixins
+include components/doctype
+include components/header
+include components/content
+include components/footer
+include components/menu
+
+include components/breadcrumbs
+include components/filters
+include components/tags
+
++doctype(pages.blog.title)
+  +menu(menuList, [pages.blog.url])
+  .-wrapper
+    +header
+    +content
+      .__columns
+        +__column_left
+          +breadcrumbs([pages.index, pages.blog])
+          form.-form-search(action='/')
+            input.__field(type='search' placeholder='Поиск записей')
+            button.__btn.icon.icon-search(type='submit')
+          +filters(['Интернет-магазин', 'landing page', 'seo', 'smm', 'digital компании']).visible-md.visible-lg
+
+        main.__column._center
+          section.-section
+            .container-fluid
+              h1.-section.__title.hidden-md.hidden-lg Блог: Лента
+            +filters(['Интернет-магазин', 'landing page', 'seo', 'smm', 'digital компании']).hidden-md.hidden-lg
+            .container-fluid
+              .-writes-list-2
+                .__inner
+                  article.-write-item-2
+                    .__inner
+                      h2.__title
+                        +a(pages.blogView.url).__title-link Mts на «Стачке-2016»: бьем рекорды, отмечаем день рождения
+                      .__info
+                        .-date.write-item-2__date
+                          span.__icon.icon.icon-calendar
+                          | 8 сентября 2016
+                        .-comments.write-item-2__comments
+                          span.__icon.icon.icon-comment
+                          | 3
+                        .-share-box.write-item-2__share
+                          .__item.dropdown
+                            span.__btn.icon.icon-share.dropdown-toggle(data-toggle='dropdown')
+                            .__share-list.dropdown-menu.dropdown-menu-right
+                              .__item
+                                span.__btn.icon.icon-fb.goodshare(data-type='fb' title='Facebook')
+                                  span.__counter(data-counter='fb')
+                              .__item
+                                span.__btn.icon.icon-twitter.goodshare(data-type='tw' title='Twitter')
+                                  span.__counter(data-counter='tw')
+                              .__item
+                                span.__btn.icon.icon-vk.goodshare(data-type='vk' title='VK')
+                                  span.__counter(data-counter='vk')
+                              .__item
+                                span.__btn.fa.fa-google-plus.goodshare(data-type='gp' title='Google Plus')
+                                  span.__counter(data-counter='gp')
+                              .__item
+                                span.__btn.fa.fa-whatsapp.goodshare(data-type='wa' title='WhatsApp')
+                                  span.__counter(data-counter='wa')
+                      +a(pages.blogView.url).__img-wrap
+                        +img('files/pics/writes/unsplash_528c31f66181e_1.jpg', 'Mts на «Стачке-2016»: бьем рекорды, отмечаем день рождения', 'fit').__img
+                      .__text
+                        p Веб-студия «Магвай» помогает заказчикам выстраивать взаимоотношения с целевой аудиторией в Интернете. Мы разрабатываем веб-проекты и помогаем бизнесу привлекать клиентов с 2009 года...
+                        +a(pages.blogView.url).__icon-read.icon.icon-arr-right-2
+                      footer.__footer
+                        +tags(['smm', 'digital компании', 'технологии'])
+
+                  article.-write-item-2
+                    .__inner
+                      h2.__title
+                        +a(pages.blogView.url).__title-link Николай Фетюхин поделился опытом на «Риф+Киб 2016»
+                      .__info
+                        .-date.write-item-2__date
+                          span.__icon.icon.icon-calendar
+                          | 2 сентября 2016
+                        .-comments.write-item-2__comments
+                          span.__icon.icon.icon-comment
+                          | 14
+                        .-share-box.write-item-2__share
+                          .__item.dropdown
+                            span.__btn.icon.icon-share.dropdown-toggle(data-toggle='dropdown')
+                            .__share-list.dropdown-menu.dropdown-menu-right
+                              .__item
+                                span.__btn.icon.icon-fb.goodshare(data-type='fb' title='Facebook')
+                                  span.__counter(data-counter='fb')
+                              .__item
+                                span.__btn.icon.icon-twitter.goodshare(data-type='tw' title='Twitter')
+                                  span.__counter(data-counter='tw')
+                              .__item
+                                span.__btn.icon.icon-vk.goodshare(data-type='vk' title='VK')
+                                  span.__counter(data-counter='vk')
+                              .__item
+                                span.__btn.fa.fa-google-plus.goodshare(data-type='gp' title='Google Plus')
+                                  span.__counter(data-counter='gp')
+                              .__item
+                                span.__btn.fa.fa-whatsapp.goodshare(data-type='wa' title='WhatsApp')
+                                  span.__counter(data-counter='wa')
+                      +a(pages.blogView.url).__img-wrap
+                        +img('files/pics/writes/picjumbo.jpg', 'Николай Фетюхин поделился опытом на «Риф+Киб 2016»', 'fit').__img
+                      .__text
+                        p Abactor, diatria, et agripeta. Cantare aliquando ducunt ad rusticus lamia. Tabess sunt speciess de gratis canis. Sunt cottaes dignus varius, dexter adelphises.
+                        +a(pages.blogView.url).__icon-read.icon.icon-arr-right-2
+                      footer.__footer
+                        +tags(['digital компании', 'технологии', 'landing page'])
+
+                  article.-write-item-2
+                    .__inner
+                      h2.__title
+                        +a(pages.blogView.url).__title-link Как увеличить продажи в кризис и при этом сэкономить средства?
+                      .__info
+                        .-date.write-item-2__date
+                          span.__icon.icon.icon-calendar
+                          | 31 августа 2016
+                        .-comments.write-item-2__comments
+                          span.__icon.icon.icon-comment
+                          | 0
+                        .-share-box.write-item-2__share
+                          .__item.dropdown
+                            span.__btn.icon.icon-share.dropdown-toggle(data-toggle='dropdown')
+                            .__share-list.dropdown-menu.dropdown-menu-right
+                              .__item
+                                span.__btn.icon.icon-fb.goodshare(data-type='fb' title='Facebook')
+                                  span.__counter(data-counter='fb')
+                              .__item
+                                span.__btn.icon.icon-twitter.goodshare(data-type='tw' title='Twitter')
+                                  span.__counter(data-counter='tw')
+                              .__item
+                                span.__btn.icon.icon-vk.goodshare(data-type='vk' title='VK')
+                                  span.__counter(data-counter='vk')
+                              .__item
+                                span.__btn.fa.fa-google-plus.goodshare(data-type='gp' title='Google Plus')
+                                  span.__counter(data-counter='gp')
+                              .__item
+                                span.__btn.fa.fa-whatsapp.goodshare(data-type='wa' title='WhatsApp')
+                                  span.__counter(data-counter='wa')
+                      .__text
+                        p Cum pars messis, omnes cliniases gratia camerarius, germanus calcariaes. Est bassus demolitione, cesaris. Velox, domesticus omnias absolute aperto de noster, raptus buxum.
+                        +a(pages.blogView.url).__icon-read.icon.icon-arr-right-2
+                      footer.__footer
+                        +tags(['digital компании', 'технологии', 'landing page'])
+
+                  article.-write-item-2
+                    .__inner
+                      h2.__title
+                        +a(pages.blogView.url).__title-link Mts на «Стачке-2016»: бьем рекорды, отмечаем день рождения
+                      .__info
+                        .-date.write-item-2__date
+                          span.__icon.icon.icon-calendar
+                          | 31 августа 2016
+                        .-comments.write-item-2__comments
+                          span.__icon.icon.icon-comment
+                          | 0
+                        .-share-box.write-item-2__share
+                          .__item.dropdown
+                            span.__btn.icon.icon-share.dropdown-toggle(data-toggle='dropdown')
+                            .__share-list.dropdown-menu.dropdown-menu-right
+                              .__item
+                                span.__btn.icon.icon-fb.goodshare(data-type='fb' title='Facebook')
+                                  span.__counter(data-counter='fb')
+                              .__item
+                                span.__btn.icon.icon-twitter.goodshare(data-type='tw' title='Twitter')
+                                  span.__counter(data-counter='tw')
+                              .__item
+                                span.__btn.icon.icon-vk.goodshare(data-type='vk' title='VK')
+                                  span.__counter(data-counter='vk')
+                              .__item
+                                span.__btn.fa.fa-google-plus.goodshare(data-type='gp' title='Google Plus')
+                                  span.__counter(data-counter='gp')
+                              .__item
+                                span.__btn.fa.fa-whatsapp.goodshare(data-type='wa' title='WhatsApp')
+                                  span.__counter(data-counter='wa')
+                      +a(pages.blogView.url).__img-wrap
+                        +img('files/pics/writes/unsplash_522af9ac823b4_1.jpg', 'Mts на «Стачке-2016»: бьем рекорды, отмечаем день рождения', 'fit').__img
+                      .__text
+                        p Cum pars messis, omnes cliniases gratia camerarius, germanus calcariaes. Est bassus demolitione, cesaris. Velox, domesticus omnias absolute aperto de noster, raptus buxum.
+                        +a(pages.blogView.url).__icon-read.icon.icon-arr-right-2
+                      footer.__footer
+                        +tags(['digital компании', 'технологии', 'landing page'])
+
+                  article.-write-item-2
+                    .__inner
+                      h2.__title
+                        +a(pages.blogView.url).__title-link Как увеличить продажи в кризис и при этом сэкономить средства?
+                      .__info
+                        .-date.write-item-2__date
+                          span.__icon.icon.icon-calendar
+                          | 31 августа 2016
+                        .-comments.write-item-2__comments
+                          span.__icon.icon.icon-comment
+                          | 0
+                        .-share-box.write-item-2__share
+                          .__item.dropdown
+                            span.__btn.icon.icon-share.dropdown-toggle(data-toggle='dropdown')
+                            .__share-list.dropdown-menu.dropdown-menu-right
+                              .__item
+                                span.__btn.icon.icon-fb.goodshare(data-type='fb' title='Facebook')
+                                  span.__counter(data-counter='fb')
+                              .__item
+                                span.__btn.icon.icon-twitter.goodshare(data-type='tw' title='Twitter')
+                                  span.__counter(data-counter='tw')
+                              .__item
+                                span.__btn.icon.icon-vk.goodshare(data-type='vk' title='VK')
+                                  span.__counter(data-counter='vk')
+                              .__item
+                                span.__btn.fa.fa-google-plus.goodshare(data-type='gp' title='Google Plus')
+                                  span.__counter(data-counter='gp')
+                              .__item
+                                span.__btn.fa.fa-whatsapp.goodshare(data-type='wa' title='WhatsApp')
+                                  span.__counter(data-counter='wa')
+                      .__text
+                        p Cum pars messis, omnes cliniases gratia camerarius, germanus calcariaes. Est bassus demolitione, cesaris. Velox, domesticus omnias absolute aperto de noster, raptus buxum.
+                        +a(pages.blogView.url).__icon-read.icon.icon-arr-right-2
+                      footer.__footer
+                        +tags(['digital компании', 'технологии', 'landing page'])
+
+              hr.-hr._none-margin_all
+            footer.-footer-section.section__footer
+              .container-fluid
+                +a().-btn._type_1 #[span.__label Показать ещё]
+
+          section.-blog-best
+            .container-fluid.hidden-md.hidden-lg
+              hr.-hr._none-margin_all
+            header.-header-section.-blog-best__header
+              .container-fluid
+                h2.-header-section.__title._text_left Блог: Лучшее за неделю
+            .container-fluid
+              .-writes-list
+                article.-write-item
+                  +a(pages.blogView.url).__inner
+                    h3.__title Mts на «Стачке-2016»: бьем рекорды, отмечаем день рождения
+                    .__text
+                      p.
+                        Веб-студия «Магвай» помогает заказчикам выстраивать взаимоотношения с целевой аудиторией в Интернете. Мы разрабатываем веб-проекты и помогаем бизнесу привлекать клиентов с 2009 года...
+                      span.__icon-read.icon.icon-arr-right-2
+                article.-write-item
+                  +a(pages.blogView.url).__inner
+                    h3.__title Как увеличить продажи в кризис и при этом сэкономить средства?
+                    .__text
+                      p Salvus, castus compaters patienter demitto de talis, placidus itineris tramitem...
+                      span.__icon-read.icon.icon-arr-right-2
+    +footer
